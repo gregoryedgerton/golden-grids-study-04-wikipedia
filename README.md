@@ -143,6 +143,13 @@ display type renders tiny. Seen in a screen recording from an iPhone with
 Reduce Motion on, 2026-10-05. The rule is now `transition: none` and `.fit`
 pins it regardless. The template still carries the 0.01ms version.
 
+**Dark by device preference.** `prefers-color-scheme: dark` exchanges the
+two inks: the stock goes near-black and warm, the type cream, the red is
+lifted to read as text on the dark stock. Every box tone and every figure
+takes its colour from the same tokens, so the whole study follows the
+device, and a phone that goes dark at night takes the pages with it. Dark
+captures are `study-index-1440-dark.png` and `study-geometry-1440-dark.png`.
+
 **The register** is old print advertising rather than the encyclopaedia:
 cream stock, one black, one red, a display serif with optical sizes
 (Fraunces, 300–700, with its soft and wonk axes at the large sizes), a

@@ -6,12 +6,13 @@
    and text, variable) and Archivo Narrow (labels), loaded in each HTML. */
 
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
   --paper: #f3eadb;
   --paper-deep: #e9ddc6;
   --ink: #17120d;
   --ink-soft: #4a4036;
   --red: #b4261f;
+  --on-red: #f3eadb;
   --rule: #17120d;
   --display: "Fraunces", "Iowan Old Style", Georgia, serif;
   --label: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
@@ -20,6 +21,22 @@
   --bg: var(--paper); --fg: var(--ink); --muted: var(--ink-soft); --line: var(--rule);
   --tag-bg: var(--ink); --tag-fg: var(--paper); --btn: var(--paper-deep); --line-light: var(--paper-deep);
   --font: var(--display);
+}
+
+/* Dark, by device preference. The same two inks exchanged: the stock goes
+   near-black and warm, the type goes cream, the red is lifted so it still
+   reads as text on the dark stock. Every box tone and every figure takes
+   its colour from these tokens, so nothing else changes. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #15110c;
+    --paper-deep: #221b13;
+    --ink: #f1e8d6;
+    --ink-soft: #b9ad99;
+    --red: #e0574a;
+    --on-red: #fff6ea;
+    --rule: #f1e8d6;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -114,9 +131,9 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--red
   container-type: size;
 }
 .open .box { inset: 4px; }
-.box--red { background: var(--red); color: var(--paper); }
+.box--red { background: var(--red); color: var(--on-red); }
 .box--red .box__label, .box--red a { color: inherit; }
-.box--red a { text-decoration-color: var(--paper); }
+.box--red a { text-decoration-color: var(--on-red); }
 .box--ink { background: var(--ink); color: var(--paper); }
 .box--deep { background: var(--paper-deep); }
 .box__label { color: var(--red); margin: 0 0 0.35em; font-size: clamp(0.5rem, 3.4cqmin, 0.8rem); letter-spacing: 0.06em; }
@@ -176,7 +193,7 @@ a.box:hover .fit, a.box:focus-visible .fit { text-decoration: underline; text-de
   color: var(--red); background: transparent; border: 0; padding: 0.3em 0; cursor: pointer;
   border-bottom: 2px solid currentColor;
 }
-.box--red .more { color: var(--paper); }
+.box--red .more { color: var(--on-red); }
 .more--link { text-decoration: none; }
 .box__foot .more + .more { margin-left: 1em; }
 /* Where an expanded passage continues on another page. */

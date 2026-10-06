@@ -116,7 +116,7 @@ export function GoldenAngle() {
     <svg viewBox="0 0 100 100" style={frame} role="img" aria-label="A circle divided into two arcs in the golden ratio; the smaller arc is 137.5 degrees">
       <circle cx="50" cy="50" r="40" fill="none" stroke={INK} strokeWidth="0.8" />
       <path d={`M 50 50 L 50 10 A 40 40 0 0 1 ${x} ${y} Z`} fill={RED} fillOpacity="0.9" />
-      <text x="63" y="38" fontSize="7" fill={PAPER} fontWeight="700">137.5°</text>
+      <text x="63" y="38" fontSize="7" fill="var(--on-red)" fontWeight="700">137.5°</text>
       <text x="22" y="72" fontSize="7" fill={INK}>222.5°</text>
     </svg>
   );
