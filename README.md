@@ -125,6 +125,15 @@ body copy under a headline is sized by container query, between 0.78rem and
 1.15rem, and disappears when the square is under 150px wide or 110px tall:
 a small square keeps only its fitted line.
 
+**No flash.** Display type is held invisible until the web fonts have
+loaded (`fonts.ready`, with `display=block` on the font request) and the
+line has been fitted once; `html[data-fonts]` and `data-fit` in
+[`styles.css`](src/styles.css) key it. Without this the fallback face was
+painted at one size and Fraunces at another, a flash of large type on every
+load, which is worst for a reader who has asked for reduced motion. Nothing
+on these pages animates; the reduced-motion switch in the tools panel is
+inherited from the template and has nothing here to switch.
+
 **The register** is old print advertising rather than the encyclopaedia:
 cream stock, one black, one red, a display serif with optical sizes
 (Fraunces, 300–700, with its soft and wonk axes at the large sizes), a

@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import { Tools } from "./tools";
 import "../styles.css";
 
@@ -28,6 +28,14 @@ export function Page({ current, kicker, title, standfirst, children }: {
   standfirst: string;
   children: ReactNode;
 }) {
+  // Display type is hidden (styles.css) until the web fonts are in, so it
+  // never flashes from the fallback face. `fonts.ready` resolves whether the
+  // fonts loaded or failed; a browser without the API shows the text at once.
+  useEffect(() => {
+    const show = () => { document.documentElement.dataset.fonts = "ready"; };
+    if (document.fonts?.ready) document.fonts.ready.then(show); else show();
+  }, []);
+
   const index = PAGES.findIndex((p) => p.file === current);
   const prev = PAGES[index - 1];
   const next = PAGES[index + 1];

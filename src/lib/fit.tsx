@@ -10,6 +10,11 @@ import { useLayoutEffect, useRef, type ElementType, type ReactNode } from "react
  * the parent resizes (ResizeObserver) and on fonts loading, since a fallback
  * face measures differently from the one it stands in for. Same idea as
  * fitty, written here so the study owns the whole page.
+ *
+ * The fitted line stays invisible until the fonts have loaded and it has
+ * been fitted once (styles.css keys off `data-fit` and `html[data-fonts]`),
+ * which is what stops the large type from flashing: without it the fallback
+ * face is painted at one size and the real face at another.
  */
 export function Fit({
   as: Tag = "span",
@@ -45,7 +50,12 @@ export function Fit({
       el.style.fontSize = `${Math.floor(lo * 2) / 2}px`;
     };
 
+    // Hidden until the first fit and until the web fonts are in, so the
+    // reader never sees the fallback face at a size chosen for it, or a
+    // large line re-sizing itself. Each run is a burst of synchronous
+    // layouts inside one frame; nothing between them is painted.
     run();
+    el.dataset.fit = "ready";
     const observer = new ResizeObserver(run);
     observer.observe(box);
     document.fonts?.ready.then(run);

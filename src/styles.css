@@ -113,7 +113,13 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--red
 .box--deep { background: var(--paper-deep); }
 .box__label { color: var(--red); margin: 0 0 0.35em; font-size: clamp(0.5rem, 3.4cqmin, 0.8rem); letter-spacing: 0.06em; }
 .box--red .box__label::after, .box__label::after { content: ""; display: block; width: 2.5em; border-top: 2px solid currentColor; margin-top: 0.35em; }
-/* The fitted line: it sizes itself to the box's remaining room. */
+/* The fitted line: it sizes itself to the box's remaining room. It is not
+   shown until it has been fitted once AND the web fonts are in, so the
+   large type never flashes from the fallback face to Fraunces or from one
+   size to another. The whole page waits on the same signal for its display
+   type; the hidden state lasts as long as the fonts take, and no longer
+   than the three seconds `display=block` allows before the fallback shows. */
+.fit:not([data-fit]), html:not([data-fonts]) .fit, html:not([data-fonts]) .masthead__title, html:not([data-fonts]) .next { visibility: hidden; }
 .box__fit { flex: 1 1 auto; min-height: 0; position: relative; display: flex; align-items: center; }
 .box__fit--top { align-items: flex-start; }
 .box__fit--end { align-items: flex-end; }
