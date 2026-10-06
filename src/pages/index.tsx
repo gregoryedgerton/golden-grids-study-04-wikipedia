@@ -79,7 +79,7 @@ function Lead() {
           </Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Satisfies" fitClass="fit--num" link={{ href: "./calculation.html#derivation", label: "§ II" }} spoken="phi squared equals phi plus one">φ² = φ + 1</Fact>
+          <Fact label="Satisfies" fitClass="fit--num" link={{ href: "./calculation.html#derivation", label: "§ II" }} spoken="phi squared equals phi plus one">{"φ² =\nφ + 1"}</Fact>
         </GoldenBox>
       </GoldenGrid>
     </Band>
@@ -105,10 +105,10 @@ function Infobox() {
           </Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Algebraic form" tone="deep" fitClass="fit--num" link={{ href: "./calculation.html#roots", label: "§ II" }} spoken="one plus the square root of five, over two">(1 + √5) / 2</Fact>
+          <Fact label="Algebraic form" tone="deep" fitClass="fit--num" link={{ href: "./calculation.html#roots", label: "§ II" }} spoken="one plus the square root of five, over two">{"(1 + √5)\n/ 2"}</Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Continued fraction" tone="deep" fitClass="fit--num" link={{ href: "./fibonacci.html#fraction", label: "§ V" }} spoken="one; one, one, one, and so on">[1; 1, 1, 1, …]</Fact>
+          <Fact label="Continued fraction" tone="deep" fitClass="fit--num" link={{ href: "./fibonacci.html#fraction", label: "§ V" }} spoken="one; one, one, one, and so on">{"[1; 1,\n1, 1, …]"}</Fact>
         </GoldenBox>
       </GoldenGrid>
     </Band>

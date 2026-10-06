@@ -58,7 +58,7 @@ function Derivation() {
           </Fact>
         </GoldenBox>
         <GoldenBox {...x.boxProps("poly")}>
-          <Fact label="Step 4 · rearrange" fitClass="fit--num" tone="deep" body={<p>A quadratic equation in φ: its minimal polynomial.</p>}
+          <Fact label="Step 4 · rearrange" fitClass="fit--num" tone="deep" body={<p>A quadratic equation in φ: its minimal polynomial.</p>} spoken="phi squared minus phi minus one equals zero"
             expand={{
               group: x, slotKey: "poly", title: "The minimal polynomial",
               full: (
@@ -70,10 +70,10 @@ function Derivation() {
               source: "Adapted from the section Minimal polynomial.",
               related: [{ href: "./geometry.html#pentagon", label: "Constructing φ in the pentagon" }],
             }}
-          >φ² − φ − 1 = 0</Fact>
+          >{"φ² − φ − 1\n= 0"}</Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Step 3 · multiply by φ" fitClass="fit--num">φ + 1 = φ²</Fact>
+          <Fact label="Step 3 · multiply by φ" fitClass="fit--num" spoken="phi plus one equals phi squared">{"φ + 1\n= φ²"}</Fact>
         </GoldenBox>
         <GoldenBox>
           <Fact label="Step 2 · substitute" fitClass="fit--num" tone="deep" spoken="phi plus one, over phi, equals phi">{"(φ + 1) / φ\n= φ"}</Fact>

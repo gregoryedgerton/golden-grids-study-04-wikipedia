@@ -63,7 +63,7 @@ function Rectangle() {
               source: "Adapted from the section Golden spiral.",
               related: [{ href: "./world.html#disputed", label: "The nautilus shell, which is not one" }],
             }}
-          >r = φ^(2θ/π)</Fact>
+          >{"r =\nφ^(2θ/π)"}</Fact>
         </GoldenBox>
         <GoldenBox>
           <Fact label="Solids" body={<p>Three golden rectangles, mutually perpendicular, have the icosahedron's twelve vertices at their corners.</p>}>Icosahedron</Fact>
@@ -110,13 +110,13 @@ function Pentagon() {
           >a / b = φ</Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="From the pentagon" tone="deep" fitClass="fit--num">φ = 2 cos 36°</Fact>
+          <Fact label="From the pentagon" tone="deep" fitClass="fit--num" spoken="phi equals two cosine thirty-six degrees">{"φ = 2\ncos 36°"}</Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Equivalently" tone="deep" fitClass="fit--num">1 + 2 sin 18°</Fact>
+          <Fact label="Equivalently" tone="deep" fitClass="fit--num" spoken="one plus two sine eighteen degrees">{"1 + 2\nsin 18°"}</Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="And" fitClass="fit--num">2 sin 54°</Fact>
+          <Fact label="And" fitClass="fit--num" spoken="two sine fifty-four degrees">{"2 sin\n54°"}</Fact>
         </GoldenBox>
       </GoldenGrid>
     </Band>

@@ -170,7 +170,9 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--red
   white-space: pre-line;
   text-wrap: balance;
 }
-.fit--num { font-weight: 300; letter-spacing: -0.04em; font-variant-numeric: lining-nums tabular-nums; }
+/* A formula breaks only where its author broke it (a \n in the text), never
+   mid-expression. */
+.fit--num { font-weight: 300; letter-spacing: -0.04em; font-variant-numeric: lining-nums tabular-nums; white-space: pre; text-wrap: nowrap; }
 .fit--italic { font-style: italic; font-weight: 400; }
 .fit--caps { font-family: var(--label); font-variation-settings: normal; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; line-height: 0.9; }
 /* Body copy inside a box: sized to the box, capped either way. */
@@ -234,7 +236,8 @@ a.box:hover .fit, a.box:focus-visible .fit { text-decoration: underline; text-de
 /* A box too small for its supporting matter keeps only the fitted line.
    The box is its own container, so the rule follows the square, not the
    viewport: a unit square at 390 and a unit square at 1440 are both small. */
-@container (max-width: 150px) or (max-height: 110px) {
+/* Container queries measure the CONTENT box, inside the padding. */
+@container (max-width: 110px) or (max-height: 90px) {
   .box__body, .box__caption, .box__foot, .box__source { display: none; }
   .box__label { font-size: 0.5rem; letter-spacing: 0.04em; }
   .box__label::after { display: none; }

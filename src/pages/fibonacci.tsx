@@ -102,7 +102,7 @@ function Fraction() {
           </Figure>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Also" tone="deep" fitClass="fit--num" source="nested radicals" spoken="the square root of one plus the square root of one plus the square root of one plus, and so on">√(1 + √(1 + √(1 + …)))</Fact>
+          <Fact label="Also" tone="deep" fitClass="fit--num" source="nested radicals" spoken="the square root of one plus the square root of one plus the square root of one plus, and so on">{"√(1 + √(1 +\n√(1 + …)))"}</Fact>
         </GoldenBox>
         <GoldenBox>
           <Fact label="Binet's formula" tone="red" fitClass="fit--num" source="de Moivre, Bernoulli, Euler; Binet 1843" spoken="F of n equals phi to the n, minus minus phi to the minus n, all over the square root of five">{"F(n) =\n(φⁿ − (−φ)⁻ⁿ) / √5"}</Fact>
