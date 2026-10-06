@@ -37,7 +37,7 @@ function Rectangle() {
           </Figure>
         </GoldenBox>
         <GoldenBox {...x.boxProps("sides")}>
-          <Fact label="Sides" tone="deep" fitClass="fit--num" body={<p>Removing or adding squares leaves rectangles still proportioned in the ratio φ.</p>} source="Golden rectangle"
+          <Fact label="Sides" tone="deep" fitClass="fit--num" body={<p>Removing or adding squares leaves rectangles still proportioned in the ratio φ.</p>} source="Golden rectangle" spoken="one to phi"
             expand={{
               group: x, slotKey: "sides", title: "The golden rectangle",
               full: (
@@ -51,7 +51,7 @@ function Rectangle() {
           >1 : φ</Fact>
         </GoldenBox>
         <GoldenBox {...x.boxProps("spiral")}>
-          <Fact label="The spiral" tone="red" fitClass="fit--num" body={<p>Grows by φ each quarter-turn.</p>}
+          <Fact label="The spiral" tone="red" fitClass="fit--num" body={<p>Grows by φ each quarter-turn.</p>} spoken="r equals phi to the power two theta over pi"
             expand={{
               group: x, slotKey: "spiral", title: "The golden spiral",
               full: (

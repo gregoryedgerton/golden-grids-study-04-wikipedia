@@ -41,8 +41,9 @@ export function Page({ current, kicker, title, standfirst, children }: {
   const next = PAGES[index + 1];
   return (
     <>
-      <Tools />
+      {/* The skip link is the first thing in the tab order, before the tools. */}
       <a className="skip" href="#content">Skip to content</a>
+      <Tools />
       <header className="masthead">
         <p className="masthead__kicker">
           <span>Layout study 04</span>

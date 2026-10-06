@@ -36,6 +36,7 @@ function Derivation() {
           <Fact
             label="Result · the positive root"
             fitClass="fit--num"
+            spoken="phi equals one plus the square root of five, over two, which is 1.618033 and so on"
             body={<p>The quadratic formula yields two solutions. The positive root is the golden ratio; the negative root, −1/φ, shares many of its properties.</p>}
             source="Calculation, final step"
             expand={{
@@ -75,10 +76,10 @@ function Derivation() {
           <Fact label="Step 3 · multiply by φ" fitClass="fit--num">φ + 1 = φ²</Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Step 2 · substitute" fitClass="fit--num" tone="deep">{"(φ + 1) / φ\n= φ"}</Fact>
+          <Fact label="Step 2 · substitute" fitClass="fit--num" tone="deep" spoken="phi plus one, over phi, equals phi">{"(φ + 1) / φ\n= φ"}</Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Step 1 · define" fitClass="fit--num" link={{ href: "./index.html#lead", label: "§ I" }}>{"(a + b) / a\n= a / b = φ"}</Fact>
+          <Fact label="Step 1 · define" fitClass="fit--num" link={{ href: "./index.html#lead", label: "§ I" }} spoken="a plus b, over a, equals a over b, equals phi">{"(a + b) / a\n= a / b = φ"}</Fact>
         </GoldenBox>
       </GoldenGrid>
     </Band>
@@ -98,10 +99,10 @@ function Roots() {
     >
       <GoldenGrid from={1} to={2} placement="right">
         <GoldenBox>
-          <Fact label="Positive root" tone="ink" fitClass="fit--num" source="φ, the golden ratio">{"1 + √5\n2"}</Fact>
+          <Fact label="Positive root" tone="ink" fitClass="fit--num" source="φ, the golden ratio" spoken="one plus the square root of five, over two">{"1 + √5\n2"}</Fact>
         </GoldenBox>
         <GoldenBox {...x.boxProps("conj")}>
-          <Fact label="Negative root" tone="red" fitClass="fit--num" source="1 − φ = −1/φ"
+          <Fact label="Negative root" tone="red" fitClass="fit--num" source="1 − φ = −1/φ" spoken="one minus the square root of five, over two"
             expand={{
               group: x, slotKey: "conj", title: "The algebraic conjugate",
               full: (

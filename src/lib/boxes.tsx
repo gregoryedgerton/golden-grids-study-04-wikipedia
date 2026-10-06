@@ -1,6 +1,16 @@
 import type { ReactNode } from "react";
 import { Fit } from "./fit";
 import { ExpandedCell, type ExpandGroup } from "./expand";
+import { PAGES } from "./Page";
+
+/** The accessible name of a section link: "Continued in section IV, Geometry". */
+function sectionName(href: string): string | undefined {
+  const file = href.replace(/^\.\//, "").split("#")[0];
+  const i = PAGES.findIndex((p) => p.file === file);
+  if (i < 0) return undefined;
+  const roman = ["I", "II", "III", "IV", "V", "VI"][i];
+  return `Continued in section ${roman}, ${PAGES[i].title}`;
+}
 
 /**
  * What goes inside a slot. Three kinds, and every one is a flex column
@@ -18,7 +28,7 @@ const tone = (t?: Tone) => (t && t !== "paper" ? ` box--${t}` : "");
 /** One fact: a label, a fitted line, optional body copy, a source line,
  *  and optionally a longer passage behind a "more" control. */
 export function Fact({
-  label, children, fitClass, min, max, body, source, tone: t, align, expand, link,
+  label, children, fitClass, min, max, body, source, tone: t, align, expand, link, spoken,
 }: {
   label?: string;
   children: ReactNode;
@@ -32,20 +42,23 @@ export function Fact({
   expand?: { group: ExpandGroup; slotKey: string; title: string; full: ReactNode; source?: string; related?: Related[] };
   /** Where this fact continues on another page. */
   link?: { href: string; label: string };
+  /** What a screen reader should say for the fitted line, when the visible
+   *  line breaks a formula across lines or uses symbols that do not read. */
+  spoken?: string;
 }) {
   return (
     <>
       <div className={`box${tone(t)}`}>
         {label && <p className="box__label">{label}</p>}
         <div className={`box__fit${align ? ` box__fit--${align}` : ""}`}>
-          <Fit as="p" className={fitClass} min={min ?? 8} max={max}>{children}</Fit>
+          <Fit as="p" className={fitClass} min={min ?? 8} max={max} ariaLabel={spoken}>{children}</Fit>
         </div>
         {body && <div className="box__body">{body}</div>}
         {(source || expand || link) && (
           <div className="box__foot">
             {source && <span className="box__source">{source}</span>}
-            {link && <a className="more more--link" href={link.href}>{link.label}</a>}
-            {expand && <button className="more" {...expand.group.triggerProps(expand.slotKey)}>More</button>}
+            {link && <a className="more more--link" href={link.href} aria-label={sectionName(link.href)}>{link.label}</a>}
+            {expand && <button className="more" aria-label={`More: ${expand.title}`} {...expand.group.triggerProps(expand.slotKey)}>More</button>}
           </div>
         )}
       </div>

@@ -11,7 +11,8 @@
   --paper-deep: #e9ddc6;
   --ink: #17120d;
   --ink-soft: #4a4036;
-  --red: #b4261f;
+  --red: #b4261f;         /* red as text and line */
+  --red-ground: #b4261f;  /* red as a ground under light type */
   --on-red: #f3eadb;
   --rule: #17120d;
   --display: "Fraunces", "Iowan Old Style", Georgia, serif;
@@ -33,7 +34,8 @@
     --paper-deep: #221b13;
     --ink: #f1e8d6;
     --ink-soft: #b9ad99;
-    --red: #e0574a;
+    --red: #e0574a;         /* lifted, to read as text on the dark stock */
+    --red-ground: #a8231c;  /* kept deep, so the light type on it reads */
     --on-red: #fff6ea;
     --rule: #f1e8d6;
   }
@@ -131,10 +133,15 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--red
   container-type: size;
 }
 .open .box { inset: 4px; }
-.box--red { background: var(--red); color: var(--on-red); }
+.box--red { background: var(--red-ground); color: var(--on-red); }
 .box--red .box__label, .box--red a { color: inherit; }
 .box--red a { text-decoration-color: var(--on-red); }
 .box--ink { background: var(--ink); color: var(--paper); }
+/* On the inverted and red grounds the red label would fall under 4.5:1, so
+   the label takes the box's own text colour there. */
+.box--ink .box__label, .box--red .box__label { color: inherit; }
+.box--ink .more { color: inherit; }
+.box--ink :focus-visible, .box--red :focus-visible { outline-color: currentColor; }
 .box--deep { background: var(--paper-deep); }
 .box__label { color: var(--red); margin: 0 0 0.35em; font-size: clamp(0.5rem, 3.4cqmin, 0.8rem); letter-spacing: 0.06em; }
 .box--red .box__label::after, .box__label::after { content: ""; display: block; width: 2.5em; border-top: 2px solid currentColor; margin-top: 0.35em; }
@@ -170,7 +177,7 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--red
 .box__body p:last-child { margin-bottom: 0; }
 .box__foot { margin-top: auto; padding-top: 0.5em; font-size: clamp(0.55rem, 3.4cqmin, 0.8rem); display: flex; justify-content: space-between; gap: 1em; align-items: baseline; }
 .box__source { font-size: clamp(0.7rem, 3.2cqmin, 0.85rem); color: var(--ink-soft); font-style: italic; }
-.box--red .box__source, .box--ink .box__source { color: inherit; opacity: 0.8; }
+.box--red .box__source, .box--ink .box__source { color: inherit; }
 /* A diagram fills its box, inset. */
 .box--figure { padding: clamp(6px, 3cqmin, 24px); }
 .box--figure svg { flex: 1 1 0; min-height: 0; height: auto !important; width: 100%; }
@@ -188,6 +195,7 @@ a.box:hover .fit, a.box:focus-visible .fit { text-decoration: underline; text-de
 
 /* The read-more button: a small-caps word, not a chrome button. */
 .more {
+  min-height: 24px; /* WCAG 2.2 target size */
   font: 700 1em/1 var(--label);
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--red); background: transparent; border: 0; padding: 0.3em 0; cursor: pointer;

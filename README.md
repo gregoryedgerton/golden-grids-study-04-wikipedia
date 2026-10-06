@@ -170,6 +170,44 @@ Seven, all original, all inline SVG drawn from the mathematics:
 7. The ratios of successive Fibonacci numbers, as a line chart, and φ as a
    continued fraction of ones.
 
+## Accessibility
+
+Audited with axe-core 4.10 (WCAG 2.0/2.1/2.2 A and AA plus best practice)
+on all six pages in both colour schemes, with an expansion open: no
+violations. What that took, and what axe cannot check:
+
+- **Contrast.** The red label fell under 4.5:1 on the inverted and red
+  boxes, so there it takes the box's own text colour. In dark mode the red
+  that reads as text (`--red`) is lifted, and the red that sits under light
+  type (`--red-ground`) is kept deep: two tokens, because one value cannot
+  pass both ways.
+- **Names.** Sixteen buttons all read "More" to a screen reader; each is
+  now "More: ⟨the passage's title⟩". The section marks (`§ IV`) read
+  "Continued in section IV, Geometry". The contents mark the current page
+  with `aria-current`.
+- **Formulae.** A line like "1 + √5" over "2" is a fraction to the eye and
+  a list of symbols to a screen reader. Eleven fitted lines carry a spoken
+  form as visually hidden text ("one plus the square root of five, over
+  two") and the visible line is hidden from assistive technology.
+- **Figures.** Every SVG is `role="img"` with a label that says what it
+  shows, including the chart's data; captions are `figcaption`.
+- **Keyboard.** The skip link is first in the tab order, before the tools.
+  Tab reaches every More control; Enter opens the passage and moves focus to
+  its close control; Escape closes it and returns focus to the control that
+  opened it; everything the passage covers is `inert` while it is open.
+  Focus rings are 3px, in the box's own text colour on red and inverted
+  grounds.
+- **Targets.** Every control is at least 24px tall (WCAG 2.2).
+- **Reflow.** No horizontal scroll at 320px.
+- **Motion.** Nothing animates; the reduced-motion rule is `none`.
+- **Structure.** One `h1` per page, one `h2` per band, landmarks for
+  header, nav, main and footer, `lang="en"`, a distinct title per page.
+
+Not checked, and stated: the fitted type's smallest lines are 11px at 390
+on the contents band, which no rule forbids and no reader with low vision
+would thank us for; and nothing has been tested with a real screen reader
+user.
+
 ## Interactions: expand, and cross
 
 Two ways to go deeper, both without leaving the grid.

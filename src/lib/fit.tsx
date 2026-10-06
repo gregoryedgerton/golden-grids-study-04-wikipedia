@@ -25,12 +25,15 @@ export function Fit({
   min = 12,
   max = 320,
   className,
+  ariaLabel,
   children,
 }: {
   as?: ElementType;
   min?: number;
   max?: number;
   className?: string;
+  /** Spoken form, when the visible line is a formula broken across lines. */
+  ariaLabel?: string;
   children: ReactNode;
 }) {
   const ref = useRef<HTMLElement>(null);
@@ -67,8 +70,13 @@ export function Fit({
   }, [min, max, children]);
 
   return (
-    <Tag ref={ref} className={["fit", className].filter(Boolean).join(" ")}>
-      {children}
-    </Tag>
+    <>
+      <Tag ref={ref} className={["fit", className].filter(Boolean).join(" ")} aria-hidden={ariaLabel ? true : undefined}>
+        {children}
+      </Tag>
+      {/* aria-label is unreliable on a paragraph, so the spoken form is real
+          text, visually hidden, beside the line it stands for. */}
+      {ariaLabel && <span className="visually-hidden">{ariaLabel}</span>}
+    </>
   );
 }
