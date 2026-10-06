@@ -128,7 +128,10 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--red
 .box {
   position: absolute; inset: 0;
   display: flex; flex-direction: column;
-  padding: min(28px, 5%); /* a percentage of the square's own width, so a 17px square keeps room for its digit */
+  /* Interior padding as a share of the square's own width: 8% of the side,
+     between 4px and 36px, so a 17px square keeps room for its digit and an
+     840px square gets a margin worth the name. */
+  padding: clamp(4px, 8%, 36px);
   overflow: hidden;
   container-type: size;
 }
@@ -211,7 +214,7 @@ a.box:hover .fit, a.box:focus-visible .fit { text-decoration: underline; text-de
 .cell__related a { font-family: var(--display); font-size: 1.1rem; font-weight: 600; text-decoration-color: var(--red); }
 
 /* Expanded cell: the band becomes the full passage, set as a measure. */
-.cell { padding: clamp(12px, 2vw, 28px); background: var(--paper-deep); }
+.cell { padding: clamp(16px, 3vw, 40px); background: var(--paper-deep); }
 .cell__body { max-width: var(--measure); font-size: clamp(1rem, 1.4vw, 1.25rem); line-height: 1.45; }
 .cell__body p { margin: 0 0 0.8em; }
 .cell__body blockquote { margin: 0 0 0.8em; padding-left: 1em; border-left: 3px solid var(--red); font-style: italic; }
