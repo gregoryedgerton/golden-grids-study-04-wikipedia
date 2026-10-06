@@ -236,6 +236,10 @@ a.box:hover .fit, a.box:focus-visible .fit { text-decoration: underline; text-de
   .box__label { font-size: 0.5rem; letter-spacing: 0.04em; }
   .box__label::after { display: none; }
 }
-@container (max-width: 150px) or (max-height: 110px) {
-  .box__label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Labels wrap rather than truncate: a cut label is a cut fact. In a square
+   too small for both a label and a line, the line wins and the label goes;
+   the expanded passage and the band's lesson still carry the name. */
+.box__label { overflow-wrap: anywhere; }
+@container (max-width: 64px) or (max-height: 64px) {
+  .box__label { display: none; }
 }

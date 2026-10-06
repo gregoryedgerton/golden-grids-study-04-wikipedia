@@ -197,6 +197,12 @@ violations. What that took, and what axe cannot check:
   opened it; everything the passage covers is `inert` while it is open.
   Focus rings are 3px, in the box's own text colour on red and inverted
   grounds.
+- **Nothing is cut.** No label is truncated with an ellipsis and no body
+  copy is clipped mid-sentence: labels wrap, body copy is removed whole
+  when the square is under 240px tall, and in a square under 64px the label
+  goes and the fitted line stays. A scan of every box at 390, 820 and 1440
+  (`captures/`-style script, in the commit history) finds no element
+  overflowing its square.
 - **Targets.** Every control is at least 24px tall (WCAG 2.2).
 - **Reflow.** No horizontal scroll at 320px.
 - **Motion.** Nothing animates; the reduced-motion rule is `none`.
