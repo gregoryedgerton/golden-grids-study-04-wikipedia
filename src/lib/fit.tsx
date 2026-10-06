@@ -15,6 +15,10 @@ import { useLayoutEffect, useRef, type ElementType, type ReactNode } from "react
  * been fitted once (styles.css keys off `data-fit` and `html[data-fonts]`),
  * which is what stops the large type from flashing: without it the fallback
  * face is painted at one size and the real face at another.
+ *
+ * The element must not have a CSS transition on font-size, however short:
+ * the measurement after each write is synchronous and would read the
+ * pre-transition size. styles.css pins `.fit { transition: none }`.
  */
 export function Fit({
   as: Tag = "span",

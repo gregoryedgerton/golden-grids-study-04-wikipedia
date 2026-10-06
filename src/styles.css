@@ -32,9 +32,17 @@ body {
 }
 a { color: inherit; text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 0.12em; }
 :focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+/* Reduced motion. Nothing on these pages animates, so the rule is `none`,
+   not the common 0.01ms trick. The trick turns every style write into a
+   transition, and the fitted type is sized by writing font-size and
+   measuring synchronously: under a 0.01ms transition the measurement reads
+   the OLD size, the binary search converges on its 8px floor, and the
+   display type comes out tiny. That is what iOS Reduce Motion did here. */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+/* And the fitted line never transitions, whatever else is set. */
+.fit { transition: none !important; }
 
 .skip { position: absolute; left: 0; top: 0; padding: 0.5rem 1rem; background: var(--ink); color: var(--paper); transform: translateY(-120%); }
 .skip:focus { transform: none; }
@@ -101,7 +109,7 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--red
 .box {
   position: absolute; inset: 0;
   display: flex; flex-direction: column;
-  padding: clamp(8px, 2.4cqmin, 28px);
+  padding: min(28px, 5%); /* a percentage of the square's own width, so a 17px square keeps room for its digit */
   overflow: hidden;
   container-type: size;
 }
@@ -120,7 +128,9 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--red
    type; the hidden state lasts as long as the fonts take, and no longer
    than the three seconds `display=block` allows before the fallback shows. */
 .fit:not([data-fit]), html:not([data-fonts]) .fit, html:not([data-fonts]) .masthead__title, html:not([data-fonts]) .next { visibility: hidden; }
-.box__fit { flex: 1 1 auto; min-height: 0; position: relative; display: flex; align-items: center; }
+/* The fitted line keeps at least a third of the box; the supporting matter
+   below it gives way first, and is removed altogether in a short box. */
+.box__fit { flex: 1 0 auto; min-height: 34%; position: relative; display: flex; align-items: center; }
 .box__fit--top { align-items: flex-start; }
 .box__fit--end { align-items: flex-end; }
 .fit {
@@ -137,7 +147,8 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--red
 .fit--italic { font-style: italic; font-weight: 400; }
 .fit--caps { font-family: var(--label); font-variation-settings: normal; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; line-height: 0.9; }
 /* Body copy inside a box: sized to the box, capped either way. */
-.box__body { margin: 0.5em 0 0; font-size: clamp(0.78rem, 4.2cqmin, 1.15rem); line-height: 1.35; max-width: var(--measure); }
+.box__body { margin: 0.5em 0 0; font-size: clamp(0.78rem, 4.2cqmin, 1.15rem); line-height: 1.35; max-width: var(--measure); flex: 0 1 auto; min-height: 0; overflow: hidden; }
+@container (max-height: 240px) { .box__body { display: none; } }
 .box__body p { margin: 0 0 0.5em; }
 .box__body p:last-child { margin-bottom: 0; }
 .box__foot { margin-top: auto; padding-top: 0.5em; font-size: clamp(0.55rem, 3.4cqmin, 0.8rem); display: flex; justify-content: space-between; gap: 1em; align-items: baseline; }

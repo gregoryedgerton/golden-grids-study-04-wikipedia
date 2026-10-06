@@ -134,6 +134,15 @@ load, which is worst for a reader who has asked for reduced motion. Nothing
 on these pages animates; the reduced-motion switch in the tools panel is
 inherited from the template and has nothing here to switch.
 
+**Reduce Motion on iOS broke the fit, and the fix is in the CSS.** The
+template's reduced-motion rule used the common trick of setting every
+transition to 0.01ms. A transition of any length on `font-size` means the
+synchronous measurement after each write in the binary search reads the
+size before the write, so the search converges on its 8px floor and the
+display type renders tiny. Seen in a screen recording from an iPhone with
+Reduce Motion on, 2026-10-05. The rule is now `transition: none` and `.fit`
+pins it regardless. The template still carries the 0.01ms version.
+
 **The register** is old print advertising rather than the encyclopaedia:
 cream stock, one black, one red, a display serif with optical sizes
 (Fraunces, 300–700, with its soft and wonk axes at the large sizes), a
