@@ -33,7 +33,14 @@ export function Page({ current, kicker, title, standfirst, children }: {
   // fonts loaded or failed; a browser without the API shows the text at once.
   useEffect(() => {
     const show = () => { document.documentElement.dataset.fonts = "ready"; };
-    if (document.fonts?.ready) document.fonts.ready.then(show); else show();
+    if (!document.fonts) { show(); return; }
+    // Wait for the display faces themselves, not just `ready`, which iOS
+    // Safari can resolve before a face that is used only later has loaded.
+    // Whatever happens, show the type after two seconds.
+    const faces = ["600 1em Fraunces", "500 1em Fraunces", "300 1em Fraunces", "italic 400 1em Fraunces", "700 1em 'Archivo Narrow'"];
+    Promise.all(faces.map((f) => document.fonts.load(f).catch(() => []))).then(show, show);
+    const timer = setTimeout(show, 2000);
+    return () => clearTimeout(timer);
   }, []);
 
   const index = PAGES.findIndex((p) => p.file === current);

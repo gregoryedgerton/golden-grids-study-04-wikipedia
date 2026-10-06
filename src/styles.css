@@ -155,9 +155,11 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--red
    type; the hidden state lasts as long as the fonts take, and no longer
    than the three seconds `display=block` allows before the fallback shows. */
 .fit:not([data-fit]), html:not([data-fonts]) .fit, html:not([data-fonts]) .masthead__title, html:not([data-fonts]) .next { visibility: hidden; }
-/* The fitted line keeps at least a third of the box; the supporting matter
-   below it gives way first, and is removed altogether in a short box. */
-.box__fit { flex: 1 0 auto; min-height: 34%; position: relative; display: flex; align-items: center; }
+/* The fitted line's room is whatever the label, body and foot leave: a flex
+   basis of 0 that grows to fill, never sized by its own content. This is
+   what the fit measures against, so it must not grow when the text is too
+   big; with `auto` it did, in WebKit, and the measurement always passed. */
+.box__fit { flex: 1 1 0; min-height: 0; position: relative; display: flex; align-items: center; overflow: hidden; }
 .box__fit--top { align-items: flex-start; }
 .box__fit--end { align-items: flex-end; }
 .fit {
@@ -176,7 +178,9 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--red
 .fit--italic { font-style: italic; font-weight: 400; }
 .fit--caps { font-family: var(--label); font-variation-settings: normal; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; line-height: 0.9; }
 /* Body copy inside a box: sized to the box, capped either way. */
-.box__body { margin: 0.5em 0 0; font-size: clamp(0.78rem, 4.2cqmin, 1.15rem); line-height: 1.35; max-width: var(--measure); flex: 0 1 auto; min-height: 0; overflow: hidden; }
+/* Body copy is never clipped: it keeps its full height, and is removed
+   whole in a short box. */
+.box__body { margin: 0.5em 0 0; font-size: clamp(0.78rem, 4.2cqmin, 1.15rem); line-height: 1.35; max-width: var(--measure); flex: 0 0 auto; }
 @container (max-height: 240px) { .box__body { display: none; } }
 .box__body p { margin: 0 0 0.5em; }
 .box__body p:last-child { margin-bottom: 0; }

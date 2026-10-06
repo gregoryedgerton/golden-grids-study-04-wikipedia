@@ -63,10 +63,25 @@ export function Fit({
     // layouts inside one frame; nothing between them is painted.
     run();
     el.dataset.fit = "ready";
+    // Observe the line as well as its box: when the web font arrives the
+    // line's own size changes (the fallback face has other metrics), and on
+    // iOS Safari `fonts.ready` can resolve before that happens. A re-run that
+    // lands on the same size changes nothing, so the observer settles.
     const observer = new ResizeObserver(run);
     observer.observe(box);
-    document.fonts?.ready.then(run);
-    return () => observer.disconnect();
+    observer.observe(el);
+    if (document.fonts) {
+      document.fonts.ready.then(run);
+      // Ask for this element's own face explicitly; the promise resolves
+      // when that face is usable, which is the moment the metrics change.
+      const { fontStyle, fontWeight, fontFamily } = getComputedStyle(el);
+      document.fonts.load(`${fontStyle} ${fontWeight} 1em ${fontFamily}`).then(run, run);
+      document.fonts.addEventListener("loadingdone", run);
+    }
+    return () => {
+      observer.disconnect();
+      document.fonts?.removeEventListener("loadingdone", run);
+    };
   }, [min, max, children]);
 
   return (

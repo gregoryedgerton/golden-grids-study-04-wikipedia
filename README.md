@@ -200,9 +200,12 @@ violations. What that took, and what axe cannot check:
 - **Nothing is cut.** No label is truncated with an ellipsis and no body
   copy is clipped mid-sentence: labels wrap, body copy is removed whole
   when the square is under 240px tall, and in a square under 64px the label
-  goes and the fitted line stays. A scan of every box at 390, 820 and 1440
-  (`captures/`-style script, in the commit history) finds no element
-  overflowing its square.
+  goes and the fitted line stays. A scan of every box at 390, 820 and 1440,
+  in Chrome and in WebKit, finds no element overflowing its square. The
+  WebKit run mattered: the line's container had `flex: 1 0 auto`, which in
+  WebKit grew to fit the oversized text, so the fit measured against a box
+  that was always big enough and the type overflowed on iPhones. It is now
+  `flex: 1 1 0`, a definite box the fit can measure against.
 - **Targets.** Every control is at least 24px tall (WCAG 2.2).
 - **Reflow.** No horizontal scroll at 320px.
 - **Motion.** Nothing animates; the reduced-motion rule is `none`.
