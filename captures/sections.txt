@@ -1,0 +1,450 @@
+== History ==
+
+According to Mario Livio,
+
+Some of the greatest mathematical minds of all ages, from Pythagoras and Euclid in ancient Greece, through the medieval Italian mathematician Leonardo of Pisa and the Renaissance astronomer Johannes Kepler, to present-day scientific figures such as Oxford physicist Roger Penrose, have spent endless hours over this simple ratio and its properties. ... Biologists, artists, musicians, historians, architects, psychologists, and even mystics have pondered and debated the basis of its ubiquity and appeal. In fact, it is probably fair to say that the Golden Ratio has inspired thinkers of all disciplines like no other number in the history of mathematics.
+Ancient Greek mathematicians first studied the golden ratio because of its frequent appearance in geometry; the division of a line into "extreme and mean ratio" (the golden section) is important in the geometry of regular pentagrams and pentagons. According to one story, 5th-century BC mathematician Hippasus discovered that the golden ratio was neither a whole number nor a fraction (it is irrational), surprising Pythagoreans. Euclid's Elements (c. 300 BC) provides several propositions and their proofs employing the golden ratio, and contains its first known definition which proceeds as follows:
+
+A straight line is said to have been cut in extreme and mean ratio when, as the whole line is to the greater segment, so is the greater to the lesser.
+
+The golden ratio was studied peripherally over the next millennium. Abu Kamil (c. 850–930) employed it in his geometric calculations of pentagons and decagons; his writings influenced that of Fibonacci (Leonardo of Pisa) (c. 1170–1250), who used t
+----
+=== Relationship to Fibonacci and Lucas numbers ===
+
+Fibonacci numbers and Lucas numbers have an intricate relationship with the golden ratio. In the Fibonacci sequence, each termF
+ 
+ nis equal to the sum of the preceding two termsF
+ 
+ n
+ −
+ 1andF
+ 
+ n
+ −
+ 2, starting with the base sequence0
+ ,
+ 1as the 0th and 1st termsF
+ 
+ 0andF
+ 
+ 1:
+
+The sequence of Lucas numbers (not to be confused with the generalized Lucas sequences, of which this is part) is like the Fibonacci sequence, in that each termL
+ 
+ nis the sum of the previous two termsL
+ 
+ n
+ −
+ 1andL
+ 
+ n
+ −
+ 2, however instead starts with2
+ ,
+ 1as the 0th and 1st termsL
+ 
+ 0andL
+ 
+ 1:
+
+Exceptionally, the golden ratio is equal to the limit of the ratios of successive terms in the Fibonacci sequence and sequence of Lucas numbers: lim
+ 
+ n
+ →
+ ∞ F
+ 
+ n
+ +
+ 1 F
+ 
+ n =
+ 
+ lim
+ 
+ n
+ →
+ ∞ L
+ 
+ n
+ +
+ 1 L
+ 
+ n =
+ φ
+ . In other words, if a Fibonacci and Lucas number is divided by its immediate predecessor in the sequence, the quotient approximatesφ. For example,
+
+These approximations are alternately lower and higher thanφ, and converge toφas the Fibonacci and Lucas numbers increase.
+Closed-form expressions for the Fibonacci and Lucas sequences that involve the golden ratio are: F
+ 
+ (
+ n
+ )
+ 
+ = φ
+ 
+ n −
+ (
+ −
+ φ
+ 
+ )
+ 
+ −
+ n 5 = φ
+ 
+ n −
+ (
+ 1
+ −
+ φ
+ 
+ )
+ 
+ n 5 = 1
+ 
+ 5 [ ( 1
+ + 5 2 ) n − ( 1
+ − 5 2 ) n ]
+ 
+ , L
+ 
+ (
+ n
+ )
+ 
+ =
+ 
+ φ
+ 
+ n +
+ (
+ −
+ φ
+ 
+ )
+ 
+ −
+ n =
+ 
+ φ
+ 
+ n +
+ (
+ 1
+ −
+ φ
+ 
+ )
+ 
+ n = ( 1
+ + 5 2 ) n + ( 1
+ − 5 2 ) n . Combining both formulas above, one obtains a formula forφ
+ 
+ nthat involves both Fibonacci and Lucas numbers: φ
+ 
+ n = 1
+ 2 ( L
+ 
+ n +
+ 
+ F
+ 
+ n 5 ) . Between Fibonacci and Lucas numbers one can dedu
+----
+==== Golden angle ====
+
+Dividing the basic definition for the golden ratio byφ
+ 
+ 2gives 1
+ = 1
+ φ + 1
+ 
+ φ
+ 
+ 2 . When two angles that sum to360
+ 
+ ∘have a ratio ofφ, the larger one has size360
+ 
+ ∘ /
+ 
+ φ
+ ≈
+ 
+ 222.5
+ 
+ ∘; the smaller one has size360
+ 
+ ∘ / φ
+ 
+ 2 ≈
+ 
+ 137.5
+ 
+ ∘and is called the golden angle.
+This angle occurs in patterns of plant growth as the optimal spacing of leaf shoots around plant stems so that successive leaves do not block sunlight from the leaves below them.
+
+
+----
+===== Pentagon and pentagram =====
+
+In a regular pentagon the ratio of a diagonal to a side is the golden ratio, while intersecting diagonals section each other in the golden ratio. The golden ratio properties of a regular pentagon can be confirmed by applying Ptolemy's theorem to the quadrilateral formed by removing one of its vertices. If the quadrilateral's long edge and diagonals area, and short edges areb, then Ptolemy's theorem givesa
+ 
+ 2 =
+ 
+ b
+ 
+ 2 +
+ a
+ b. Dividing both sides bya
+ byields a
+ b = a
+ +
+ b
+ 
+ a =
+ φ
+ . The diagonal segments of a regular pentagon form a pentagram, or five-pointed star polygon, whose geometry is quintessentially described byφ. Primarily, each intersection of edges sections other edges in the golden ratio. The ratio of the length of the shorter segment to the segment bounded by the two intersecting edges (that is, a side of the inverted pentagon in the pentagram's center) isφ, as the four-color illustration shows.
+Pentagonal and pentagrammic geometry permits us to calculate the following values forφ: φ =
+ 1
+ +
+ 2
+ sin
+ ⁡
+ (
+ π
+ 
+ /
+ 
+ 10
+ )
+ =
+ 1
+ +
+ 2
+ sin
+ ⁡
+ 
+ 18
+ 
+ ∘ , φ = 1
+ 2 csc
+ ⁡
+ (
+ π
+ 
+ /
+ 
+ 10
+ )
+ = 1
+ 2 csc
+ ⁡
+ 
+ 18
+ 
+ ∘ , φ =
+ 2
+ cos
+ ⁡
+ (
+ π
+ 
+ /
+ 
+ 5
+ )
+ =
+ 2
+ cos
+ ⁡
+ 
+ 36
+ 
+ ∘ , φ =
+ 2
+ sin
+ ⁡
+ (
+ 3
+ π
+ 
+ /
+ 
+ 10
+ )
+ =
+ 2
+ sin
+ ⁡
+ 
+ 54
+ 
+ ∘ . 
+----
+===== Kepler triangle =====
+
+The Kepler triangle, named after Johannes Kepler, is the unique right triangle with sides in geometric progression: 1
+ 
+ : φ + :
+ 
+ φ
+ . These side lengths are the three Pythagorean means of the two numbersφ
+ ±
+ 1. The three squares on its sides have areas in the golden geometric progression1
+ 
+ :
+ 
+ φ
+ 
+ : φ
+ 
+ 2.
+Among isosceles triangles, the ratio of inradius to side length is maximized for the triangle formed by two reflected copies of the Kepler triangle, sharing the longer of their two legs. The same isosceles triangle maximizes the ratio of the radius of a semicircle on its base to its perimeter.
+For a Kepler triangle with smallest side lengths, the area and acute internal angles are: A = 1
+ 2 s
+ 
+ 2 φ + , θ =
+ 
+ sin
+ 
+ −
+ 1 ⁡ 1
+ φ ≈
+ 
+ 38.1727
+ 
+ ∘ , θ =
+ 
+ cos
+ 
+ −
+ 1 ⁡ 1
+ φ ≈
+ 
+ 51.8273
+ 
+ ∘ . 
+----
+===== Golden rectangle =====
+
+The golden ratio proportions the adjacent side lengths of a golden rectangle in1
+ 
+ :
+ 
+ φratio. Removing or adding squares from golden rectangles leaves rectangles still proportioned inφratio. They can be generated by golden spirals, through successive Fibonacci and Lucas number-sized squares and quarter circles. They feature prominently in the geometry of the regular icosahedron and dodecahedron.
+
+
+----
+==== Golden spiral ====
+
+Logarithmic spirals are self-similar spirals where distances covered per turn are in geometric progression. A logarithmic spiral whose radius increases by a factor of the golden ratio for each quarter-turn is called the golden spiral. These spirals can be approximated by quarter-circles that grow by the golden ratio, or their approximations generated from Fibonacci numbers, often depicted inscribed within a spiraling pattern of squares growing in the same ratio. The exact logarithmic spiral form of the golden spiral can be described by the polar equation with(
+ r
+ ,
+ θ
+ ): r
+ =
+ 
+ φ
+ 
+ 2
+ θ
+ 
+ /
+ 
+ π . Not all logarithmic spirals are connected to the golden ratio, and not all spirals that are connected to the golden ratio are the same shape as the golden spiral. For instance, a different logarithmic spiral, encasing a nested sequence of golden isosceles triangles, grows by the golden ratio for each108
+ 
+ ∘that it turns, instead of the90
+ 
+ ∘turning angle of the golden spiral. Another variation, called the "better golden spiral", grows by the golden ratio for each half-turn, rather than each quarter-turn.
+
+
+----
+=== Architecture ===
+
+The Swiss architect Le Corbusier, famous for his contributions to the modern international style, centered his design philosophy on systems of harmony and proportion. Le Corbusier's faith in the mathematical order of the universe was closely bound to the golden ratio and the Fibonacci series, which he described as "rhythms apparent to the eye and clear in their relations with one another. And these rhythms are at the very root of human activities. They resound in man by an organic inevitability, the same fine inevitability which causes the tracing out of the Golden Section by children, old men, savages and the learned."
+Le Corbusier explicitly used the golden ratio in his Modulor system for the scale of architectural proportion. He saw this system as a continuation of the long tradition of Vitruvius, Leonardo da Vinci's "Vitruvian Man", the work of Leon Battista Alberti, and others who used the proportions of the human body to improve the appearance and function of architecture.
+In addition to the golden ratio, Le Corbusier based the system on human measurements, Fibonacci numbers, and the double unit. He took suggestion of the golden ratio in human proportions to an extreme: he sectioned his model human body's height at the navel with the two sections in golden ratio, then subdivided those sections in golden ratio at the knees and throat; he used these golden ratio proportions in the Modulor system. Le Corbusier's 1927 Villa Stein in Garches exemplified the Modulor system's application. The villa's rectangular ground plan, elevation, and inner structure closely approximate golden rectangles.
+Another Swiss architect, Mario Botta, bases many of his de
+----
+=== Art ===
+
+Leonardo da Vinci's illustrations of polyhedra in Pacioli's Divina proportione have led some to speculate that he incorporated the golden ratio in his paintings. But the suggestion that his Mona Lisa, for example, employs golden ratio proportions, is not supported by Leonardo's own writings. Similarly, although Leonardo's Vitruvian Man is often shown in connection with the golden ratio, the proportions of the figure do not actually match it, and the text only mentions whole number ratios.
+Salvador Dalí, influenced by the works of Matila Ghyka, explicitly used the golden ratio in his masterpiece, The Sacrament of the Last Supper. The dimensions of the canvas are a golden rectangle. A huge dodecahedron, in perspective so that edges appear in golden ratio to one another, is suspended above and behind Jesus and dominates the composition. The futurist artist Almada Negreiros openly used geometrical constructions involving the golden ratio in various artworks.
+A statistical study on 565 works of art of different great painters, performed in 1999, found that these artists had not used the golden ratio in the size of their canvases. The study concluded that the average ratio of the two sides of the paintings studied is1.34, with averages for individual artists ranging from1.04(Goya) to1.46(Bellini). On the other hand, Pablo Tosto listed over 350 works by well-known artists, including more than 100 which have canvasses with golden rectangle and5proportions, and others with proportions like2,3,4, and6.
+
+
+----
+=== Books and design ===
+
+According to Jan Tschichold,
+
+There was a time when deviations from the truly beautiful page proportions2
+ 
+ :
+ 
+ 3,1
+ 
+ : 3, and the Golden Section were rare. Many books produced between 1550 and 1770 show these proportions exactly, to within half a millimeter.
+According to some sources, the golden ratio is used in everyday design, for example in the proportions of playing cards, postcards, posters, light switch plates, and widescreen televisions.
+
+
+----
+=== Music ===
+Ernő Lendvai analyzes Béla Bartók's works as being based on two opposing systems, that of the golden ratio and the acoustic scale, though other music scholars reject that analysis. French composer Erik Satie used the golden ratio in several of his pieces, including Sonneries de la Rose+Croix. The golden ratio is also apparent in the organization of the sections in the music of Debussy's Reflets dans l'eau (Reflections in water), from Images (1st series, 1905), in which "the sequence of keys is marked out by the intervals 34, 21, 13 and 8, and the main climax sits at the phi position".
+The musicologist Roy Howat has observed that the formal boundaries of Debussy's La Mer correspond exactly to the golden section. Trezise finds the intrinsic evidence "remarkable", but cautions that no written or reported evidence suggests that Debussy consciously sought such proportions.
+Music theorists including Hans Zender and Heinz Bohlen have experimented with the 833 cents scale, a musical scale based on using the golden ratio as its fundamental musical interval. When measured in cents, a logarithmic scale for musical intervals, the golden ratio is approximately 833.09 cents.
+
+
+----
+=== Nature ===
+
+Johannes Kepler wrote that "the image of man and woman stems from the divine proportion. In my opinion, the propagation of plants and the progenitive acts of animals are in the same ratio".
+The psychologist Adolf Zeising noted that the golden ratio appeared in phyllotaxis and argued from these patterns in nature that the golden ratio was a universal law. Zeising wrote in 1854 of a universal orthogenetic law of "striving for beauty and completeness in the realms of both nature and art".
+However, some have argued that many apparent manifestations of the golden ratio in nature, especially in regard to animal dimensions, are fictitious.
+
+
+----
+=== Optimization ===
+
+It is impossible to perfectly evenly arrangenpoints on a sphere for most values ofn. Given a collection of points on the sphere, there are several possible criteria for judging how evenly distributed the points are, but there is no known method for producing an optimum arrangement, except for a few specific values ofn. (The Thomson problem seeks to minimize the electric potential when the points are imagined as charged particles, while the Tammes problem seeks to maximize the minimum distance between points.)
+However, a useful approximation to an optimal arrangement results from dividing the sphere into parallel bands of equal surface area and placing one point in each band at longitudes separated by the golden angle360
+ 
+ ∘ / φ
+ 
+ 2 ≈
+ 
+ 137.5
+ 
+ ∘, an arrangement sometimes called a Fibonacci lattice. Such an arrangement of points can be used for numerical integration on the sphere, for example in numerical weather prediction. This method was also used to arrange the 1500 mirrors of the student-participatory satellite Starshine 3.
+
+The golden ratio is a critical element to golden-section search as well.
+
+
+----
+== Disputed observations ==
+Examples of disputed observations of the golden ratio include the following:
+
+Specific proportions in the bodies of vertebrates (including humans) are often claimed to be in the golden ratio; for example the ratio of successive phalangeal and metacarpal bones (finger bones) has been said to approximate the golden ratio. There is a large variation in the real measures of these elements in specific individuals, however, and the proportion in question is often significantly different from the golden ratio.
+The shells of mollusks such as the nautilus are often claimed to be in the golden ratio. The growth of nautilus shells follows a logarithmic spiral, and it is sometimes erroneously claimed that any logarithmic spiral is related to the golden ratio, or sometimes claimed that each new chamber is golden-proportioned relative to the previous one. However, measurements of nautilus shells do not support this claim.
+Historian John Man states that both the pages and text area of the Gutenberg Bible were "based on the golden section shape". However, according to his own measurements, the ratio of height to width of the pages is1.45.
+Studies by psychologists, starting with Gustav Fechner c. 1876, have been devised to test the idea that the golden ratio plays a role in human perception of beauty. While Fechner found a preference for rectangle ratios centered on the golden ratio, later attempts to carefully test such a hypothesis have been, at best, inconclusive.
+In investing, some practitioners of technical analysis use the golden ratio to indicate support of a price level, or resistance to price increases, of a stock or commodity; after significant price 
+----
+=== Egyptian pyramids ===
+
+The Great Pyramid of Giza (also known as the Pyramid of Cheops or Khufu) has been analyzed by pyramidologists as having a doubled Kepler triangle as its cross-section. If this theory were true, the golden ratio would describe the ratio of distances from the midpoint of one of the sides of the pyramid to its apex, and from the same midpoint to the center of the pyramid's base. However, imprecision in measurement caused in part by the removal of the outer surface of the pyramid makes it impossible to distinguish this theory from other numerical theories of the proportions of the pyramid, based on pi or on whole-number ratios. The consensus of modern scholars is that this pyramid's proportions are not based on the golden ratio, because such a basis would be inconsistent both with what is known about Egyptian mathematics from the time of construction of the pyramid, and with Egyptian theories of architecture and proportion used in their other works.
+
+
+----
+=== The Parthenon ===
+
+The Parthenon's façade (c. 432 BC) as well as elements of its façade and elsewhere are said by some to be circumscribed by golden rectangles. Other scholars deny that the Greeks had any aesthetic association with golden ratio. For example, Keith Devlin says, "Certainly, the oft repeated assertion that the Parthenon in Athens is based on the golden ratio is not supported by actual measurements. In fact, the entire story about the Greeks and golden ratio seems to be without foundation." Midhat J. Gazalé affirms that "It was not until Euclid ... that the golden ratio's mathematical properties were studied."
+From measurements of 15 temples, 18 monumental tombs, 8 sarcophagi, and 58 grave stelae from the fifth century BC to the second century AD, one researcher concluded that the golden ratio was totally absent from Greek architecture of the classical fifth century BC, and almost absent during the following six centuries.
+Later sources like Vitruvius (first century BC) exclusively discuss proportions that can be expressed in whole numbers, i.e. commensurate as opposed to irrational proportions.
+
+
+----
+=== Modern art ===
+
+The Section d'Or ('Golden Section') was a collective of painters, sculptors, poets and critics associated with Cubism and Orphism. Active from 1911 to around 1914, they adopted the name both to highlight that Cubism represented the continuation of a grand tradition, rather than being an isolated movement, and in homage to the mathematical harmony associated with Georges Seurat. (Several authors have claimed that Seurat employed the golden ratio in his paintings, but Seurat's writings and paintings suggest that he employed simple whole-number ratios and any approximation of the golden ratio was coincidental.) The Cubists observed in its harmonies, geometric structuring of motion and form, "the primacy of idea over nature", "an absolute scientific clarity of conception". However, despite this general interest in mathematical harmony, whether the paintings featured in the celebrated 1912 Salon de la Section d'Or exhibition used the golden ratio in any compositions is more difficult to determine. Livio, for example, claims that they did not, and Marcel Duchamp said as much in an interview. On the other hand, an analysis suggests that Juan Gris made use of the golden ratio in composing works that were likely, but not definitively, shown at the exhibition. Art historian Daniel Robbins has argued that in addition to referencing the mathematical term, the exhibition's name also refers to the earlier Bandeaux d'Or group, with which Albert Gleizes and other former members of the Abbaye de Créteil had been involved.
+Piet Mondrian has been said to have used the golden section extensively in his geometrical paintings, though other experts (including critic Yve-Alai

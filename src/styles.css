@@ -1,0 +1,199 @@
+/* Study 04 — the register. Old print advertising: cream stock, one black,
+   one red, a display serif cut large, a narrow grotesque for the small
+   labels, rules instead of boxes. The reference is a single column of
+   16px/1.6 serif with 250px of thumbnails down the right; nothing of it is
+   borrowed except the licence to use its text. Fonts: Fraunces (display
+   and text, variable) and Archivo Narrow (labels), loaded in each HTML. */
+
+:root {
+  color-scheme: light;
+  --paper: #f3eadb;
+  --paper-deep: #e9ddc6;
+  --ink: #17120d;
+  --ink-soft: #4a4036;
+  --red: #b4261f;
+  --rule: #17120d;
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --label: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
+  --measure: 58ch;
+  /* The tools panel reads these. */
+  --bg: var(--paper); --fg: var(--ink); --muted: var(--ink-soft); --line: var(--rule);
+  --tag-bg: var(--ink); --tag-fg: var(--paper); --btn: var(--paper-deep); --line-light: var(--paper-deep);
+  --font: var(--display);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--paper); color: var(--ink); }
+body {
+  margin: 0;
+  font: 17px/1.5 var(--display);
+  font-variation-settings: "opsz" 14, "SOFT" 30, "WONK" 0;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 0.12em; }
+:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+.skip { position: absolute; left: 0; top: 0; padding: 0.5rem 1rem; background: var(--ink); color: var(--paper); transform: translateY(-120%); }
+.skip:focus { transform: none; }
+
+.masthead, .band, .next, .colophon {
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(12px, 3vw, 40px);
+}
+
+/* --- Masthead: a nameplate ---------------------------------------------- */
+.masthead { padding-block: 1.25rem 0; }
+.label, .masthead__kicker, .band__title, .contents, .band__note, .box__label, .media__tag, .chip {
+  font-family: var(--label);
+  font-variation-settings: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+.masthead__kicker {
+  display: flex; justify-content: space-between; gap: 1rem;
+  margin: 0; padding-bottom: 0.4rem;
+  border-bottom: 3px solid var(--rule);
+  box-shadow: 0 5px 0 -4px var(--rule); /* the thick-thin double rule */
+  padding-right: 80px; /* the tools tab owns the corner */
+}
+.masthead__title {
+  margin: 0.4rem 0 0;
+  font-weight: 600;
+  font-size: clamp(2.6rem, 9vw, 8.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
+}
+.masthead__standfirst {
+  max-width: var(--measure);
+  margin: 0.75rem 0 0;
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  line-height: 1.35;
+  font-style: italic;
+  font-variation-settings: "opsz" 24, "SOFT" 60, "WONK" 1;
+}
+.contents { margin-top: 1rem; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.contents ol { display: flex; flex-wrap: wrap; gap: 0 1.5rem; margin: 0; padding: 0.45rem 0; list-style: none; counter-reset: c; }
+.contents li { counter-increment: c; }
+.contents li::before { content: counter(c, upper-roman) ". "; color: var(--red); }
+.contents a { text-decoration: none; }
+.contents a:hover { text-decoration: underline; }
+.contents [aria-current] { border-bottom: 2px solid var(--red); }
+
+/* --- Bands ----------------------------------------------------------------- */
+.band { padding-block: 2rem 1rem; }
+.band__header { display: grid; grid-template-columns: 1fr auto; gap: 0.25rem 2rem; align-items: baseline; margin-bottom: 0.75rem; }
+.band__title { margin: 0; color: var(--red); }
+.band__lesson { grid-column: 1 / -1; max-width: var(--measure); margin: 0; font-size: 1rem; color: var(--ink-soft); }
+.band__note { grid-column: 1 / -1; margin: 0; color: var(--ink-soft); letter-spacing: 0.04em; text-transform: none; }
+.band__wrap { width: 100%; }
+
+/* --- Boxes ----------------------------------------------------------------- */
+/* Every slot's content is an inset block; the gutter is the grid's rule.
+   `.rule` bands draw hairlines between boxes with the library's outline
+   prop and inset nothing; `.open` bands inset and draw no lines. */
+.box {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  padding: clamp(8px, 2.4cqmin, 28px);
+  overflow: hidden;
+  container-type: size;
+}
+.open .box { inset: 4px; }
+.box--red { background: var(--red); color: var(--paper); }
+.box--red .box__label, .box--red a { color: inherit; }
+.box--red a { text-decoration-color: var(--paper); }
+.box--ink { background: var(--ink); color: var(--paper); }
+.box--deep { background: var(--paper-deep); }
+.box__label { color: var(--red); margin: 0 0 0.35em; font-size: clamp(0.5rem, 3.4cqmin, 0.8rem); letter-spacing: 0.06em; }
+.box--red .box__label::after, .box__label::after { content: ""; display: block; width: 2.5em; border-top: 2px solid currentColor; margin-top: 0.35em; }
+/* The fitted line: it sizes itself to the box's remaining room. */
+.box__fit { flex: 1 1 auto; min-height: 0; position: relative; display: flex; align-items: center; }
+.box__fit--top { align-items: flex-start; }
+.box__fit--end { align-items: flex-end; }
+.fit {
+  display: block;
+  margin: 0;
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 1;
+  white-space: pre-line;
+  text-wrap: balance;
+}
+.fit--num { font-weight: 300; letter-spacing: -0.04em; font-variant-numeric: lining-nums tabular-nums; }
+.fit--italic { font-style: italic; font-weight: 400; }
+.fit--caps { font-family: var(--label); font-variation-settings: normal; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; line-height: 0.9; }
+/* Body copy inside a box: sized to the box, capped either way. */
+.box__body { margin: 0.5em 0 0; font-size: clamp(0.78rem, 4.2cqmin, 1.15rem); line-height: 1.35; max-width: var(--measure); }
+.box__body p { margin: 0 0 0.5em; }
+.box__body p:last-child { margin-bottom: 0; }
+.box__foot { margin-top: auto; padding-top: 0.5em; font-size: clamp(0.55rem, 3.4cqmin, 0.8rem); display: flex; justify-content: space-between; gap: 1em; align-items: baseline; }
+.box__source { font-size: clamp(0.7rem, 3.2cqmin, 0.85rem); color: var(--ink-soft); font-style: italic; }
+.box--red .box__source, .box--ink .box__source { color: inherit; opacity: 0.8; }
+/* A diagram fills its box, inset. */
+.box--figure { padding: clamp(6px, 3cqmin, 24px); }
+.box--figure svg { flex: 1 1 0; min-height: 0; height: auto !important; width: 100%; }
+.box--figure .box__caption { margin: 0.4em 0 0; font-size: clamp(0.72rem, 3.4cqmin, 0.95rem); line-height: 1.3; font-style: italic; }
+/* Placeholder slot: the ad's "No." stamp. */
+.golden-grid__box--placeholder .box { align-items: center; justify-content: center; text-align: center; }
+
+/* A box that is a link to another page. */
+a.box, .box a.box__link {
+  text-decoration: none;
+  color: inherit;
+}
+a.box:hover .fit, a.box:focus-visible .fit { text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 0.06em; }
+.box__arrow { font-family: var(--label); color: var(--red); font-size: clamp(0.55rem, 3.4cqmin, 0.8rem); }
+
+/* The read-more button: a small-caps word, not a chrome button. */
+.more {
+  font: 700 1em/1 var(--label);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--red); background: transparent; border: 0; padding: 0.3em 0; cursor: pointer;
+  border-bottom: 2px solid currentColor;
+}
+.box--red .more { color: var(--paper); }
+.more--link { text-decoration: none; }
+.box__foot .more + .more { margin-left: 1em; }
+/* Where an expanded passage continues on another page. */
+.cell__related { margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+.cell__related .label { margin: 0 0 0.3rem; color: var(--red); }
+.cell__related ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; }
+.cell__related a { font-family: var(--display); font-size: 1.1rem; font-weight: 600; text-decoration-color: var(--red); }
+
+/* Expanded cell: the band becomes the full passage, set as a measure. */
+.cell { padding: clamp(12px, 2vw, 28px); background: var(--paper-deep); }
+.cell__body { max-width: var(--measure); font-size: clamp(1rem, 1.4vw, 1.25rem); line-height: 1.45; }
+.cell__body p { margin: 0 0 0.8em; }
+.cell__body blockquote { margin: 0 0 0.8em; padding-left: 1em; border-left: 3px solid var(--red); font-style: italic; }
+.cell__title { font-family: var(--display); font-weight: 600; font-variation-settings: "opsz" 48, "SOFT" 50; }
+.cell__source { font-size: 0.9rem; color: var(--ink-soft); font-style: italic; }
+
+/* --- Read on, colophon ------------------------------------------------------ */
+.next { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem 2rem; margin: 2rem auto 0; padding-top: 1rem; border-top: 3px solid var(--rule); font-size: clamp(1.3rem, 2.6vw, 2.2rem); font-weight: 600; font-variation-settings: "opsz" 72, "SOFT" 50, "WONK" 1; }
+.next p { margin: 0; }
+.next p:last-child { margin-left: auto; text-align: right; }
+.next .label { color: var(--red); }
+.colophon { padding-block: 2rem 3rem; color: var(--ink-soft); font-size: 0.9rem; }
+.colophon p { max-width: 72ch; }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* A box too small for its supporting matter keeps only the fitted line.
+   The box is its own container, so the rule follows the square, not the
+   viewport: a unit square at 390 and a unit square at 1440 are both small. */
+@container (max-width: 150px) or (max-height: 110px) {
+  .box__body, .box__caption, .box__foot, .box__source { display: none; }
+  .box__label { font-size: 0.5rem; letter-spacing: 0.04em; }
+  .box__label::after { display: none; }
+}
+@container (max-width: 150px) or (max-height: 110px) {
+  .box__label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}

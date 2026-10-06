@@ -1,0 +1,60 @@
+import { useLayoutEffect, useRef, type ElementType, type ReactNode } from "react";
+
+/**
+ * Type that fits its container. The reference sets every heading at one size
+ * and lets the column decide how many lines it takes; a golden grid hands
+ * each fact a box of a different size, so the type has to meet the box.
+ *
+ * Binary search on font-size, in CSS pixels, until the element's scroll box
+ * no longer exceeds its parent's content box on either axis. Re-run when
+ * the parent resizes (ResizeObserver) and on fonts loading, since a fallback
+ * face measures differently from the one it stands in for. Same idea as
+ * fitty, written here so the study owns the whole page.
+ */
+export function Fit({
+  as: Tag = "span",
+  min = 12,
+  max = 320,
+  className,
+  children,
+}: {
+  as?: ElementType;
+  min?: number;
+  max?: number;
+  className?: string;
+  children: ReactNode;
+}) {
+  const ref = useRef<HTMLElement>(null);
+
+  useLayoutEffect(() => {
+    const el = ref.current;
+    const box = el?.parentElement;
+    if (!el || !box) return;
+
+    const fits = (px: number) => {
+      el.style.fontSize = `${px}px`;
+      return el.scrollWidth <= box.clientWidth && el.scrollHeight <= box.clientHeight;
+    };
+    const run = () => {
+      let lo = min;
+      let hi = max;
+      while (hi - lo > 0.5) {
+        const mid = (lo + hi) / 2;
+        if (fits(mid)) lo = mid; else hi = mid;
+      }
+      el.style.fontSize = `${Math.floor(lo * 2) / 2}px`;
+    };
+
+    run();
+    const observer = new ResizeObserver(run);
+    observer.observe(box);
+    document.fonts?.ready.then(run);
+    return () => observer.disconnect();
+  }, [min, max, children]);
+
+  return (
+    <Tag ref={ref} className={["fit", className].filter(Boolean).join(" ")}>
+      {children}
+    </Tag>
+  );
+}

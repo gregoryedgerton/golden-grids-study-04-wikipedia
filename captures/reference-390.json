@@ -1,0 +1,2228 @@
+{
+ "tiles": [
+  {
+   "text": "",
+   "x": 222,
+   "y": 143,
+   "w": 81,
+   "h": 102
+  },
+  {
+   "text": "",
+   "x": 222,
+   "y": 397,
+   "w": 86,
+   "h": 102
+  },
+  {
+   "text": "Having a line segment ⁠ 𝐴 𝐵 ⁠, constru",
+   "x": 75,
+   "y": 17447,
+   "w": 291,
+   "h": 104
+  },
+  {
+   "text": "Draw an arc with center ⁠ 𝐴 ⁠ and radiu",
+   "x": 75,
+   "y": 17632,
+   "w": 291,
+   "h": 156
+  },
+  {
+   "text": "Draw a line segment ⁠ 𝐴 𝑆 ⁠ and constr",
+   "x": 75,
+   "y": 17830,
+   "w": 291,
+   "h": 104
+  },
+  {
+   "text": "A circular arc around ⁠ 𝑀 ⁠ with radius",
+   "x": 75,
+   "y": 17963,
+   "w": 291,
+   "h": 156
+  },
+  {
+   "text": "Penrose's original version of this tilin",
+   "x": 50,
+   "y": 22432,
+   "w": 316,
+   "h": 130
+  },
+  {
+   "text": "The kite and dart Penrose tiling uses ki",
+   "x": 50,
+   "y": 22564,
+   "w": 316,
+   "h": 312
+  },
+  {
+   "text": "The kite and dart can each be cut on the",
+   "x": 50,
+   "y": 22877,
+   "w": 316,
+   "h": 182
+  },
+  {
+   "text": "The rhombic Penrose tiling contains two ",
+   "x": 50,
+   "y": 23061,
+   "w": 316,
+   "h": 338
+  },
+  {
+   "text": "Specific proportions in the bodies of ve",
+   "x": 50,
+   "y": 43236,
+   "w": 316,
+   "h": 286
+  },
+  {
+   "text": "The shells of mollusks such as the nauti",
+   "x": 50,
+   "y": 43524,
+   "w": 316,
+   "h": 286
+  },
+  {
+   "text": "Historian John Man states that both the ",
+   "x": 50,
+   "y": 43811,
+   "w": 316,
+   "h": 156
+  },
+  {
+   "text": "Studies by psychologists, starting with ",
+   "x": 50,
+   "y": 43969,
+   "w": 316,
+   "h": 234
+  },
+  {
+   "text": "In investing, some practitioners of tech",
+   "x": 50,
+   "y": 44204,
+   "w": 316,
+   "h": 416
+  },
+  {
+   "text": "Metallic ratio – Solution to the quadrat",
+   "x": 50,
+   "y": 47940,
+   "w": 316,
+   "h": 110
+  },
+  {
+   "text": "If the constraint on ⁠ 𝑎 ⁠ and ⁠ 𝑏 ⁠ e",
+   "x": 70,
+   "y": 48197,
+   "w": 296,
+   "h": 190
+  },
+  {
+   "text": "Other names include the golden mean, gol",
+   "x": 70,
+   "y": 48389,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Euclid, Elements, Book II, Proposition 1",
+   "x": 70,
+   "y": 48484,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "\"῎Ακρον καὶ μέσον λόγον εὐθεῖα τετμῆσθαι",
+   "x": 70,
+   "y": 48579,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "After Classical Greek sculptor Phidias (",
+   "x": 70,
+   "y": 48674,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "The theorem that non-square natural numb",
+   "x": 70,
+   "y": 48769,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Jump up to: Sloane, N. J. A. (ed.). \"Seq",
+   "x": 70,
+   "y": 48971,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Summerson, John (1963). Heavenly Mansion",
+   "x": 70,
+   "y": 49211,
+   "w": 296,
+   "h": 187
+  },
+  {
+   "text": "Schielack, Vincent P. (1987). \"The Fibon",
+   "x": 70,
+   "y": 49521,
+   "w": 296,
+   "h": 164
+  },
+  {
+   "text": "Peters, J. M. H. (1978). \"An Approximate",
+   "x": 70,
+   "y": 49686,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Mackinnon, Nick (1993). \"The Portrait of",
+   "x": 70,
+   "y": 50169,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Baravalle, H. V. (1948). \"The geometry o",
+   "x": 70,
+   "y": 50289,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Schreiber, Peter (1995). \"A Supplement t",
+   "x": 70,
+   "y": 50433,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "O'Connor, John J.; Robertson, Edmund F. ",
+   "x": 70,
+   "y": 50577,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Fink, Karl (1903). A Brief History of Ma",
+   "x": 70,
+   "y": 50672,
+   "w": 296,
+   "h": 140
+  },
+  {
+   "text": "Beutelspacher, Albrecht; Petri, Bernhard",
+   "x": 70,
+   "y": 50814,
+   "w": 296,
+   "h": 140
+  },
+  {
+   "text": "Barr, Mark (1929). \"Parameters of beauty",
+   "x": 70,
+   "y": 51125,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Livio 2002, pp. 203–209 Gratias, Denis; ",
+   "x": 70,
+   "y": 51317,
+   "w": 296,
+   "h": 655
+  },
+  {
+   "text": "Sporn, Howard (2021). \"A group structure",
+   "x": 70,
+   "y": 51973,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Martin, George E. (1998). Geometric Cons",
+   "x": 70,
+   "y": 52068,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Hailperin, Max; Kaiser, Barbara K.; Knig",
+   "x": 70,
+   "y": 52187,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Hardy, G. H.; Wright, E. M. (1960) [1938",
+   "x": 70,
+   "y": 52282,
+   "w": 296,
+   "h": 140
+  },
+  {
+   "text": "Sizer, Walter S. (1986). \"Continued root",
+   "x": 70,
+   "y": 52424,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Sloane, N. J. A. (ed.). \"Sequence A16998",
+   "x": 70,
+   "y": 52591,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Jump up to: Burger, Edward B.; Starbird,",
+   "x": 70,
+   "y": 52757,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "King, S.; Beck, F.; Lüttge, U. (2004). \"",
+   "x": 70,
+   "y": 52852,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Fletcher, Rachel (2006). \"The golden sec",
+   "x": 70,
+   "y": 52971,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Jump up to: Loeb, Arthur (1992). \"The Go",
+   "x": 70,
+   "y": 53066,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Jump up to: Grünbaum, Branko; Shephard, ",
+   "x": 70,
+   "y": 53256,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Penrose, Roger (1978). \"Pentaplexity\". E",
+   "x": 70,
+   "y": 53351,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Frettlöh, D.; Harriss, E.; Gähler, F. \"R",
+   "x": 70,
+   "y": 53446,
+   "w": 296,
+   "h": 171
+  },
+  {
+   "text": "Odom, George; van de Craats, Jan (1986).",
+   "x": 70,
+   "y": 53619,
+   "w": 296,
+   "h": 140
+  },
+  {
+   "text": "Busard, Hubert L. L. (1968). \"L'algèbre ",
+   "x": 70,
+   "y": 53760,
+   "w": 296,
+   "h": 140
+  },
+  {
+   "text": "Bruce, Ian (1994). \"Another instance of ",
+   "x": 70,
+   "y": 53902,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Senechal, Marjorie (2006). \"Donald and t",
+   "x": 70,
+   "y": 54094,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Alsina, Claudi; Nelsen, Roger B. (2015).",
+   "x": 70,
+   "y": 54212,
+   "w": 296,
+   "h": 211
+  },
+  {
+   "text": "Jump up to: Loeb, Arthur L.; Varney, Wil",
+   "x": 70,
+   "y": 54496,
+   "w": 296,
+   "h": 164
+  },
+  {
+   "text": "Jump up to: Reitebuch, Ulrich; Skrodzki,",
+   "x": 70,
+   "y": 54661,
+   "w": 296,
+   "h": 187
+  },
+  {
+   "text": "Diedrichs, Danilo R. (February 2019). \"A",
+   "x": 70,
+   "y": 54850,
+   "w": 296,
+   "h": 140
+  },
+  {
+   "text": "Gunn, Charles; Sullivan, John M. (2008).",
+   "x": 70,
+   "y": 55017,
+   "w": 296,
+   "h": 211
+  },
+  {
+   "text": "Hume, Alfred (1900). \"Some propositions ",
+   "x": 70,
+   "y": 55229,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Coxeter, H.S.M.; du Val, Patrick; Flathe",
+   "x": 70,
+   "y": 55324,
+   "w": 296,
+   "h": 257
+  },
+  {
+   "text": "Muller, J. M. (2006). Elementary functio",
+   "x": 70,
+   "y": 55583,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Yee, Alexander J. (2021-03-13). \"Records",
+   "x": 70,
+   "y": 55678,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Berndt, Bruce C.; Chan, Heng Huat; Huang",
+   "x": 70,
+   "y": 55845,
+   "w": 296,
+   "h": 211
+  },
+  {
+   "text": "Duffin, Richard J. (1978). \"Algorithms f",
+   "x": 70,
+   "y": 56057,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Frings, Marcus (2002). \"The Golden Secti",
+   "x": 70,
+   "y": 56223,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Devlin, Keith (2007). \"The Myth That Wil",
+   "x": 70,
+   "y": 56510,
+   "w": 296,
+   "h": 421
+  },
+  {
+   "text": "Salvador Dalí (2008). The Dali Dimension",
+   "x": 70,
+   "y": 57004,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Hunt, Carla Herndon; Gilkey, Susan Nicod",
+   "x": 70,
+   "y": 57123,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Trabucho de Campos, Luís (2009). O Númer",
+   "x": 70,
+   "y": 57218,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Tosto, Pablo (1969). La composición áure",
+   "x": 70,
+   "y": 57385,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Tschichold, Jan (1991). The Form of the ",
+   "x": 70,
+   "y": 57480,
+   "w": 296,
+   "h": 211
+  },
+  {
+   "text": "Jones, Ronald (1971). \"The golden sectio",
+   "x": 70,
+   "y": 57764,
+   "w": 296,
+   "h": 630
+  },
+  {
+   "text": "Posamentier & Lehmann 2011, chapter 4, f",
+   "x": 70,
+   "y": 58395,
+   "w": 296,
+   "h": 140
+  },
+  {
+   "text": "Howat, Roy (1983). \"1. Proportional stru",
+   "x": 70,
+   "y": 58705,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Mongoven, Casey (2010). \"A style of musi",
+   "x": 70,
+   "y": 58872,
+   "w": 296,
+   "h": 389
+  },
+  {
+   "text": "Padovan, Richard (1999). Proportion: Sci",
+   "x": 70,
+   "y": 59287,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Zeising, Adolf (1854). \"Einleitung [pref",
+   "x": 70,
+   "y": 59405,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Pommersheim, James E.; Marks, Tim K.; Fl",
+   "x": 70,
+   "y": 59524,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Coldea, R.; Tennant, D.A.; Wheeler, E.M.",
+   "x": 70,
+   "y": 59619,
+   "w": 296,
+   "h": 234
+  },
+  {
+   "text": "Jump up to: González, Álvaro (2010). \"Me",
+   "x": 70,
+   "y": 59855,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Swinbank, Richard; Purser, R. James (200",
+   "x": 70,
+   "y": 59973,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Falbo, Clement (March 2005). \"The golden",
+   "x": 70,
+   "y": 60355,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Peterson, Ivars (1 April 2005). \"Sea she",
+   "x": 70,
+   "y": 60545,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "\"MythBusters: The Golden Ratio Around Us",
+   "x": 70,
+   "y": 60640,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Man, John (2002). Gutenberg: How One Man",
+   "x": 70,
+   "y": 60735,
+   "w": 296,
+   "h": 234
+  },
+  {
+   "text": "Fechner, Gustav (1876). Vorschule der Äs",
+   "x": 70,
+   "y": 60970,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Osler, Carol (2000). \"Support for Resist",
+   "x": 70,
+   "y": 61090,
+   "w": 296,
+   "h": 187
+  },
+  {
+   "text": "Batchelor, Roy; Ramyar, Richard (2005). ",
+   "x": 70,
+   "y": 61279,
+   "w": 296,
+   "h": 187
+  },
+  {
+   "text": "Herz-Fischler, Roger (2000). The Shape o",
+   "x": 70,
+   "y": 61468,
+   "w": 296,
+   "h": 1005
+  },
+  {
+   "text": "Van Mersbergen, Audrey M. (1998). \"Rheto",
+   "x": 70,
+   "y": 62499,
+   "w": 296,
+   "h": 140
+  },
+  {
+   "text": "Foutakis, Patrice (2014). \"Did the Greek",
+   "x": 70,
+   "y": 62760,
+   "w": 296,
+   "h": 117
+  },
+  {
+   "text": "Jeunes Peintres ne vous frappez pas !, L",
+   "x": 70,
+   "y": 62927,
+   "w": 296,
+   "h": 140
+  },
+  {
+   "text": "Herz-Fischler, Roger (1983). \"An Examina",
+   "x": 70,
+   "y": 63069,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Jump up to: Camfield, William A. (March ",
+   "x": 70,
+   "y": 63261,
+   "w": 296,
+   "h": 94
+  },
+  {
+   "text": "Green, Christopher (1992). Juan Gris. Ya",
+   "x": 70,
+   "y": 63356,
+   "w": 296,
+   "h": 124
+  },
+  {
+   "text": "Allard, Roger (June 1911). \"Sur quelques",
+   "x": 70,
+   "y": 63481,
+   "w": 296,
+   "h": 140
+  },
+  {
+   "text": "Herz-Fischler, Roger (1998) [1987]. A Ma",
+   "x": 47,
+   "y": 63775,
+   "w": 319,
+   "h": 117
+  },
+  {
+   "text": "Livio, Mario (2002). The Golden Ratio: T",
+   "x": 47,
+   "y": 63894,
+   "w": 319,
+   "h": 94
+  },
+  {
+   "text": "Schaaf, William L., ed. (1967). The Gold",
+   "x": 47,
+   "y": 64339,
+   "w": 319,
+   "h": 117
+  },
+  {
+   "text": "Scimone, Aldo (1997). La Sezione Aurea. ",
+   "x": 47,
+   "y": 64457,
+   "w": 319,
+   "h": 94
+  },
+  {
+   "text": "Walser, Hans (2001) [Der Goldene Schnitt",
+   "x": 47,
+   "y": 64552,
+   "w": 319,
+   "h": 94
+  },
+  {
+   "text": "The Myth That Will Not Go Away Archived ",
+   "x": 50,
+   "y": 65065,
+   "w": 316,
+   "h": 130
+  },
+  {
+   "text": "",
+   "x": 101,
+   "y": 65354,
+   "w": 144,
+   "h": 102
+  },
+  {
+   "text": "",
+   "x": 158,
+   "y": 65396,
+   "w": 140,
+   "h": 81
+  },
+  {
+   "text": "",
+   "x": 32,
+   "y": 65424,
+   "w": 133,
+   "h": 187
+  },
+  {
+   "text": "",
+   "x": 162,
+   "y": 65671,
+   "w": 247,
+   "h": 102
+  },
+  {
+   "text": "",
+   "x": 105,
+   "y": 65685,
+   "w": 118,
+   "h": 81
+  },
+  {
+   "text": "Text is available under the Creative Com",
+   "x": 24,
+   "y": 65972,
+   "w": 342,
+   "h": 96
+  }
+ ],
+ "url": "https://en.wikipedia.org/wiki/Golden_ratio",
+ "title": "Golden ratio - Wikipedia",
+ "width": 390,
+ "height": 66232,
+ "headings": [
+  {
+   "tag": "H2",
+   "text": "",
+   "x": 39,
+   "y": 151,
+   "w": 61,
+   "h": 22
+  },
+  {
+   "tag": "H1",
+   "text": "Golden ratio",
+   "x": 64,
+   "y": 92,
+   "w": 302,
+   "h": 40
+  },
+  {
+   "tag": "H2",
+   "text": "Calculation",
+   "x": 24,
+   "y": 2291,
+   "w": 120,
+   "h": 27
+  },
+  {
+   "tag": "H2",
+   "text": "History",
+   "x": 24,
+   "y": 3135,
+   "w": 80,
+   "h": 27
+  },
+  {
+   "tag": "H2",
+   "text": "Mathematics",
+   "x": 24,
+   "y": 7270,
+   "w": 138,
+   "h": 27
+  },
+  {
+   "tag": "H3",
+   "text": "Irrationality",
+   "x": 24,
+   "y": 7325,
+   "w": 105,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Minimal polynomial",
+   "x": 24,
+   "y": 8720,
+   "w": 178,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Algebraic conjugate and powers",
+   "x": 24,
+   "y": 9843,
+   "w": 296,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Continued fraction and square root",
+   "x": 24,
+   "y": 11179,
+   "w": 321,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Relationship to Fibonacci and Lucas numbers",
+   "x": 24,
+   "y": 12797,
+   "w": 334,
+   "h": 53
+  },
+  {
+   "tag": "H3",
+   "text": "Geometry",
+   "x": 24,
+   "y": 16745,
+   "w": 90,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Other properties",
+   "x": 24,
+   "y": 33003,
+   "w": 150,
+   "h": 22
+  },
+  {
+   "tag": "H2",
+   "text": "Applications and observations",
+   "x": 24,
+   "y": 35342,
+   "w": 320,
+   "h": 27
+  },
+  {
+   "tag": "H3",
+   "text": "Architecture",
+   "x": 24,
+   "y": 35750,
+   "w": 113,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Art",
+   "x": 24,
+   "y": 37089,
+   "w": 28,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Books and design",
+   "x": 24,
+   "y": 38825,
+   "w": 165,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Flags",
+   "x": 24,
+   "y": 39298,
+   "w": 50,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Music",
+   "x": 24,
+   "y": 39656,
+   "w": 54,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Nature",
+   "x": 24,
+   "y": 40480,
+   "w": 61,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Physics",
+   "x": 24,
+   "y": 41418,
+   "w": 73,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Optimization",
+   "x": 24,
+   "y": 41794,
+   "w": 116,
+   "h": 22
+  },
+  {
+   "tag": "H2",
+   "text": "Disputed observations",
+   "x": 24,
+   "y": 42876,
+   "w": 237,
+   "h": 27
+  },
+  {
+   "tag": "H3",
+   "text": "Egyptian pyramids",
+   "x": 24,
+   "y": 44639,
+   "w": 172,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "The Parthenon",
+   "x": 24,
+   "y": 45493,
+   "w": 134,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Modern art",
+   "x": 24,
+   "y": 46527,
+   "w": 99,
+   "h": 22
+  },
+  {
+   "tag": "H2",
+   "text": "See also",
+   "x": 24,
+   "y": 47844,
+   "w": 85,
+   "h": 27
+  },
+  {
+   "tag": "H2",
+   "text": "Notes",
+   "x": 24,
+   "y": 48156,
+   "w": 62,
+   "h": 27
+  },
+  {
+   "tag": "H2",
+   "text": "References",
+   "x": 24,
+   "y": 48885,
+   "w": 116,
+   "h": 27
+  },
+  {
+   "tag": "H3",
+   "text": "Citations",
+   "x": 24,
+   "y": 48939,
+   "w": 82,
+   "h": 22
+  },
+  {
+   "tag": "H3",
+   "text": "Works cited",
+   "x": 24,
+   "y": 63744,
+   "w": 109,
+   "h": 22
+  },
+  {
+   "tag": "H2",
+   "text": "Further reading",
+   "x": 24,
+   "y": 64083,
+   "w": 168,
+   "h": 27
+  },
+  {
+   "tag": "H2",
+   "text": "External links",
+   "x": 24,
+   "y": 64669,
+   "w": 148,
+   "h": 27
+  }
+ ],
+ "images": [
+  {
+   "alt": "Wikipedia",
+   "x": 64,
+   "y": 14,
+   "w": 140,
+   "h": 22
+  },
+  {
+   "alt": "The Free Encyclopedia",
+   "x": 64,
+   "y": 41,
+   "w": 140,
+   "h": 11
+  },
+  {
+   "alt": "two line segments of lengths a and b in ",
+   "x": 58,
+   "y": 371,
+   "w": 250,
+   "h": 145
+  },
+  {
+   "alt": "{\\displaystyle {\\frac {1+{\\sqrt {5}}}{2}",
+   "x": 162,
+   "y": 574,
+   "w": 58,
+   "h": 43
+  },
+  {
+   "alt": "{\\displaystyle 1+{\\cfrac {1}{1+{\\cfrac {",
+   "x": 162,
+   "y": 622,
+   "w": 156,
+   "h": 115
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 753,
+   "w": 252,
+   "h": 232
+  },
+  {
+   "alt": "{\\displaystyle a>b>0}",
+   "x": 189,
+   "y": 1285,
+   "w": 80,
+   "h": 18
+  },
+  {
+   "alt": "{\\displaystyle {\\frac {a+b}{a}}={\\frac {",
+   "x": 50,
+   "y": 1356,
+   "w": 137,
+   "h": 46
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle \\varphi ^{2}=\\",
+   "x": 249,
+   "y": 1477,
+   "w": 94,
+   "h": 25
+  },
+  {
+   "alt": "{\\displaystyle \\varphi ={\\frac {1+{\\sqrt",
+   "x": 50,
+   "y": 1529,
+   "w": 131,
+   "h": 49
+  },
+  {
+   "alt": "{\\displaystyle {\\frac {a+b}{a}}={\\frac {",
+   "x": 50,
+   "y": 2402,
+   "w": 137,
+   "h": 46
+  },
+  {
+   "alt": "{\\displaystyle {\\frac {{\\frac {a}{b}}+1}",
+   "x": 50,
+   "y": 2550,
+   "w": 103,
+   "h": 63
+  },
+  {
+   "alt": "{\\displaystyle {\\tfrac {a}{b}}=\\varphi }",
+   "x": 164,
+   "y": 2622,
+   "w": 53,
+   "h": 28
+  },
+  {
+   "alt": "{\\displaystyle {\\frac {\\varphi +1}{\\varp",
+   "x": 50,
+   "y": 2666,
+   "w": 97,
+   "h": 49
+  },
+  {
+   "alt": "{\\displaystyle \\varphi +1=\\varphi ^{2}}",
+   "x": 50,
+   "y": 2765,
+   "w": 94,
+   "h": 27
+  },
+  {
+   "alt": "{\\displaystyle {\\varphi }^{2}-\\varphi -1",
+   "x": 50,
+   "y": 2843,
+   "w": 133,
+   "h": 27
+  },
+  {
+   "alt": "{\\displaystyle {\\frac {1+{\\sqrt {5}}}{2}",
+   "x": 50,
+   "y": 2920,
+   "w": 200,
+   "h": 49
+  },
+  {
+   "alt": "{\\displaystyle \\ {\\frac {1-{\\sqrt {5}}}{",
+   "x": 50,
+   "y": 2969,
+   "w": 221,
+   "h": 49
+  },
+  {
+   "alt": "{\\displaystyle 1-\\varphi }",
+   "x": 24,
+   "y": 3080,
+   "w": 46,
+   "h": 22
+  },
+  {
+   "alt": "{\\displaystyle -1/\\varphi }",
+   "x": 93,
+   "y": 3079,
+   "w": 47,
+   "h": 24
+  },
+  {
+   "alt": "",
+   "x": 99,
+   "y": 4348,
+   "w": 192,
+   "h": 318
+  },
+  {
+   "alt": "{\\displaystyle 0.6180340}",
+   "x": 144,
+   "y": 5610,
+   "w": 83,
+   "h": 18
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 6533,
+   "w": 252,
+   "h": 264
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 7494,
+   "w": 252,
+   "h": 161
+  },
+  {
+   "alt": "{\\displaystyle n-m}",
+   "x": 198,
+   "y": 8157,
+   "w": 53,
+   "h": 18
+  },
+  {
+   "alt": "{\\displaystyle m/(n-m)}",
+   "x": 24,
+   "y": 8318,
+   "w": 94,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle \\varphi ={\\tfrac {1}{2}}{",
+   "x": 24,
+   "y": 8556,
+   "w": 131,
+   "h": 29
+  },
+  {
+   "alt": "{\\displaystyle 2\\varphi -1={\\sqrt {5}}}",
+   "x": 60,
+   "y": 8586,
+   "w": 108,
+   "h": 25
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 8755,
+   "w": 252,
+   "h": 208
+  },
+  {
+   "alt": "{\\displaystyle x^{2}-x-1.}",
+   "x": 50,
+   "y": 9266,
+   "w": 94,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle -\\varphi ^{-1}",
+   "x": 24,
+   "y": 9339,
+   "w": 47,
+   "h": 25
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle x^{2}+x-1}",
+   "x": 149,
+   "y": 9417,
+   "w": 88,
+   "h": 22
+  },
+  {
+   "alt": "{\\displaystyle \\mathbb {Q} {\\bigl (}{\\sq",
+   "x": 128,
+   "y": 9511,
+   "w": 60,
+   "h": 27
+  },
+  {
+   "alt": "{\\displaystyle r+s\\varphi }",
+   "x": 156,
+   "y": 9568,
+   "w": 54,
+   "h": 21
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle r^{2}+rs-s^{2}",
+   "x": 24,
+   "y": 9616,
+   "w": 101,
+   "h": 22
+  },
+  {
+   "alt": "{\\displaystyle a+b\\varphi }",
+   "x": 24,
+   "y": 9722,
+   "w": 55,
+   "h": 22
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle x^{2}-x-1}",
+   "x": 24,
+   "y": 9904,
+   "w": 88,
+   "h": 22
+  },
+  {
+   "alt": "{\\displaystyle -{\\frac {1}{\\varphi }}=1-",
+   "x": 50,
+   "y": 9957,
+   "w": 349,
+   "h": 53
+  },
+  {
+   "alt": "{\\displaystyle {\\frac {1}{\\varphi }}=\\va",
+   "x": 50,
+   "y": 10258,
+   "w": 97,
+   "h": 47
+  },
+  {
+   "alt": "{\\displaystyle {\\frac {1}{1/\\varphi }}={",
+   "x": 50,
+   "y": 10376,
+   "w": 124,
+   "h": 50
+  },
+  {
+   "alt": "{\\displaystyle {\\begin{aligned}\\varphi ^",
+   "x": 50,
+   "y": 10559,
+   "w": 234,
+   "h": 80
+  },
+  {
+   "alt": "{\\displaystyle \\varphi ^{n}=\\varphi ^{n-",
+   "x": 50,
+   "y": 10740,
+   "w": 159,
+   "h": 27
+  },
+  {
+   "alt": "{\\displaystyle \\varphi ^{n}=\\varphi \\cdo",
+   "x": 50,
+   "y": 10894,
+   "w": 162,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle F_{n-1}}",
+   "x": 218,
+   "y": 10943,
+   "w": 40,
+   "h": 21
+  },
+  {
+   "alt": "{\\displaystyle m={\\bigl \\lfloor }{\\tfrac",
+   "x": 24,
+   "y": 11060,
+   "w": 120,
+   "h": 29
+  },
+  {
+   "alt": "{\\displaystyle {\\begin{aligned}\\varphi ^",
+   "x": 50,
+   "y": 11112,
+   "w": 400,
+   "h": 27
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 11275,
+   "w": 252,
+   "h": 252
+  },
+  {
+   "alt": "{\\displaystyle \\varphi =1+1/\\varphi }",
+   "x": 114,
+   "y": 11625,
+   "w": 104,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle \\varphi =[1;1,1,1,\\dots ]",
+   "x": 50,
+   "y": 11725,
+   "w": 349,
+   "h": 131
+  },
+  {
+   "alt": "{\\displaystyle \\varphi ^{-1}=[0;1,1,1,\\d",
+   "x": 50,
+   "y": 11943,
+   "w": 368,
+   "h": 131
+  },
+  {
+   "alt": "{\\displaystyle \\left|\\xi -{\\frac {p}{q}}",
+   "x": 50,
+   "y": 12373,
+   "w": 142,
+   "h": 53
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle \\varphi ={\\sqr",
+   "x": 24,
+   "y": 12652,
+   "w": 171,
+   "h": 31
+  },
+  {
+   "alt": "{\\displaystyle \\varphi ={\\sqrt {1+{\\sqrt",
+   "x": 50,
+   "y": 12705,
+   "w": 229,
+   "h": 52
+  },
+  {
+   "alt": "",
+   "x": 74,
+   "y": 12978,
+   "w": 250,
+   "h": 155
+  },
+  {
+   "alt": "",
+   "x": 74,
+   "y": 13137,
+   "w": 250,
+   "h": 155
+  },
+  {
+   "alt": "{\\displaystyle F_{n-1}}",
+   "x": 278,
+   "y": 13531,
+   "w": 40,
+   "h": 21
+  },
+  {
+   "alt": "{\\displaystyle F_{n-2}}",
+   "x": 24,
+   "y": 13557,
+   "w": 40,
+   "h": 21
+  },
+  {
+   "alt": "{\\displaystyle L_{n-1}}",
+   "x": 242,
+   "y": 13789,
+   "w": 41,
+   "h": 21
+  },
+  {
+   "alt": "{\\displaystyle L_{n-2}}",
+   "x": 318,
+   "y": 13789,
+   "w": 41,
+   "h": 21
+  },
+  {
+   "alt": "{\\displaystyle \\lim _{n\\to \\infty }{\\fra",
+   "x": 50,
+   "y": 14067,
+   "w": 243,
+   "h": 49
+  },
+  {
+   "alt": "{\\displaystyle {\\frac {F_{16}}{F_{15}}}=",
+   "x": 50,
+   "y": 14263,
+   "w": 241,
+   "h": 49
+  },
+  {
+   "alt": "{\\displaystyle \\ {\\frac {L_{16}}{L_{15}}",
+   "x": 50,
+   "y": 14312,
+   "w": 256,
+   "h": 49
+  },
+  {
+   "alt": "{\\displaystyle F\\left(n\\right)={\\frac {\\",
+   "x": 50,
+   "y": 14568,
+   "w": 667,
+   "h": 63
+  },
+  {
+   "alt": "{\\displaystyle L\\left(n\\right)=\\varphi ^",
+   "x": 50,
+   "y": 14664,
+   "w": 590,
+   "h": 54
+  },
+  {
+   "alt": "{\\displaystyle \\varphi ^{n}={\\tfrac {1}{",
+   "x": 50,
+   "y": 14846,
+   "w": 183,
+   "h": 29
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle L_{2n}=5F_{n}^",
+   "x": 24,
+   "y": 14955,
+   "w": 307,
+   "h": 25
+  },
+  {
+   "alt": "{\\displaystyle \\lim _{n\\to \\infty }{\\fra",
+   "x": 50,
+   "y": 15081,
+   "w": 127,
+   "h": 46
+  },
+  {
+   "alt": "{\\displaystyle {\\begin{aligned}&{\\bigl \\",
+   "x": 50,
+   "y": 15203,
+   "w": 262,
+   "h": 88
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle \\varphi ^{n+1}",
+   "x": 182,
+   "y": 15330,
+   "w": 154,
+   "h": 25
+  },
+  {
+   "alt": "{\\displaystyle \\varphi ^{n}=F_{n}\\varphi",
+   "x": 50,
+   "y": 15447,
+   "w": 154,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle {\\begin{aligned}3\\varphi ",
+   "x": 50,
+   "y": 15577,
+   "w": 406,
+   "h": 91
+  },
+  {
+   "alt": "{\\displaystyle \\sum _{n=1}^{\\infty }{\\bi",
+   "x": 50,
+   "y": 15795,
+   "w": 186,
+   "h": 57
+  },
+  {
+   "alt": "{\\displaystyle {\\begin{aligned}\\varphi ^",
+   "x": 50,
+   "y": 15985,
+   "w": 224,
+   "h": 158
+  },
+  {
+   "alt": "{\\displaystyle n\\geq 2}",
+   "x": 24,
+   "y": 16211,
+   "w": 47,
+   "h": 20
+  },
+  {
+   "alt": "{\\displaystyle \\varphi ^{n}=L_{n}-(-\\var",
+   "x": 50,
+   "y": 16257,
+   "w": 165,
+   "h": 25
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle L_{n}=F_{n-1}+",
+   "x": 181,
+   "y": 16390,
+   "w": 154,
+   "h": 21
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle L_{n}F_{n}=F_{",
+   "x": 177,
+   "y": 16416,
+   "w": 102,
+   "h": 21
+  },
+  {
+   "alt": "",
+   "x": 112,
+   "y": 17073,
+   "w": 175,
+   "h": 110
+  },
+  {
+   "alt": "",
+   "x": 112,
+   "y": 17187,
+   "w": 175,
+   "h": 142
+  },
+  {
+   "alt": "",
+   "x": 107,
+   "y": 18375,
+   "w": 177,
+   "h": 178
+  },
+  {
+   "alt": "{\\displaystyle 1={\\frac {1}{\\varphi }}+{",
+   "x": 50,
+   "y": 18671,
+   "w": 116,
+   "h": 49
+  },
+  {
+   "alt": "{\\displaystyle 360^{\\circ }/\\varphi \\app",
+   "x": 24,
+   "y": 18796,
+   "w": 140,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle 360^{\\circ }/\\varphi ^{2}",
+   "x": 24,
+   "y": 18821,
+   "w": 148,
+   "h": 27
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 19089,
+   "w": 252,
+   "h": 252
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle a^{2}=b^{2}+ab",
+   "x": 66,
+   "y": 19712,
+   "w": 105,
+   "h": 22
+  },
+  {
+   "alt": "{\\displaystyle {\\frac {a}{b}}={\\frac {a+",
+   "x": 50,
+   "y": 19787,
+   "w": 137,
+   "h": 46
+  },
+  {
+   "alt": "{\\displaystyle {\\begin{aligned}\\varphi &",
+   "x": 50,
+   "y": 20236,
+   "w": 301,
+   "h": 124
+  },
+  {
+   "alt": "",
+   "x": 77,
+   "y": 20463,
+   "w": 237,
+   "h": 159
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 21935,
+   "w": 252,
+   "h": 158
+  },
+  {
+   "alt": "",
+   "x": 63,
+   "y": 23407,
+   "w": 256,
+   "h": 256
+  },
+  {
+   "alt": "",
+   "x": 57,
+   "y": 23691,
+   "w": 268,
+   "h": 255
+  },
+  {
+   "alt": "",
+   "x": 99,
+   "y": 24065,
+   "w": 192,
+   "h": 194
+  },
+  {
+   "alt": "",
+   "x": 103,
+   "y": 24566,
+   "w": 192,
+   "h": 176
+  },
+  {
+   "alt": "",
+   "x": 63,
+   "y": 24811,
+   "w": 272,
+   "h": 176
+  },
+  {
+   "alt": "{\\displaystyle 1\\mathbin {:} {\\sqrt {\\va",
+   "x": 50,
+   "y": 25167,
+   "w": 88,
+   "h": 29
+  },
+  {
+   "alt": "{\\displaystyle \\varphi \\pm 1}",
+   "x": 217,
+   "y": 25248,
+   "w": 46,
+   "h": 22
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle 1\\mathbin {:} ",
+   "x": 187,
+   "y": 25297,
+   "w": 72,
+   "h": 25
+  },
+  {
+   "alt": "{\\displaystyle {\\begin{aligned}A&={\\tfra",
+   "x": 50,
+   "y": 25611,
+   "w": 216,
+   "h": 141
+  },
+  {
+   "alt": "",
+   "x": 107,
+   "y": 25855,
+   "w": 177,
+   "h": 214
+  },
+  {
+   "alt": "{\\displaystyle {\\begin{aligned}\\alpha &=",
+   "x": 50,
+   "y": 26907,
+   "w": 376,
+   "h": 80
+  },
+  {
+   "alt": "{\\displaystyle {\\begin{aligned}d&={\\frac",
+   "x": 50,
+   "y": 27079,
+   "w": 345,
+   "h": 119
+  },
+  {
+   "alt": "{\\displaystyle {\\begin{aligned}A&=\\sin(\\",
+   "x": 50,
+   "y": 27278,
+   "w": 328,
+   "h": 99
+  },
+  {
+   "alt": "{\\displaystyle r={\\frac {a}{\\sqrt {5}}}.",
+   "x": 50,
+   "y": 27444,
+   "w": 73,
+   "h": 47
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 27715,
+   "w": 252,
+   "h": 214
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 28400,
+   "w": 252,
+   "h": 171
+  },
+  {
+   "alt": "",
+   "x": 107,
+   "y": 28645,
+   "w": 177,
+   "h": 260
+  },
+  {
+   "alt": "{\\displaystyle (r,\\theta )}",
+   "x": 123,
+   "y": 29415,
+   "w": 42,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle r=\\varphi ^{2\\theta /\\pi ",
+   "x": 50,
+   "y": 29462,
+   "w": 83,
+   "h": 28
+  },
+  {
+   "alt": "",
+   "x": 74,
+   "y": 29894,
+   "w": 242,
+   "h": 248
+  },
+  {
+   "alt": "{\\displaystyle \\xi ={\\sqrt {{\\sqrt {5}}\\",
+   "x": 50,
+   "y": 30733,
+   "w": 311,
+   "h": 41
+  },
+  {
+   "alt": "{\\displaystyle R_{\\mathrm {d} }={\\frac {",
+   "x": 50,
+   "y": 30994,
+   "w": 115,
+   "h": 39
+  },
+  {
+   "alt": "{\\displaystyle r_{\\mathrm {d} }={\\frac {",
+   "x": 169,
+   "y": 30986,
+   "w": 110,
+   "h": 52
+  },
+  {
+   "alt": "{\\displaystyle \\rho _{\\mathrm {d} }={\\fr",
+   "x": 50,
+   "y": 31037,
+   "w": 90,
+   "h": 39
+  },
+  {
+   "alt": "{\\displaystyle R_{\\mathrm {i} }={\\frac {",
+   "x": 50,
+   "y": 31187,
+   "w": 90,
+   "h": 39
+  },
+  {
+   "alt": "{\\displaystyle r_{\\mathrm {i} }={\\frac {",
+   "x": 145,
+   "y": 31179,
+   "w": 110,
+   "h": 56
+  },
+  {
+   "alt": "{\\displaystyle \\rho _{\\mathrm {i} }={\\fr",
+   "x": 50,
+   "y": 31234,
+   "w": 77,
+   "h": 39
+  },
+  {
+   "alt": "{\\displaystyle {\\frac {R_{\\mathrm {d} }}",
+   "x": 50,
+   "y": 31376,
+   "w": 156,
+   "h": 49
+  },
+  {
+   "alt": "{\\displaystyle A_{\\mathrm {d} }=a^{2}{\\f",
+   "x": 50,
+   "y": 31529,
+   "w": 108,
+   "h": 49
+  },
+  {
+   "alt": "{\\displaystyle V_{\\mathrm {d} }=a^{3}{\\f",
+   "x": 194,
+   "y": 31526,
+   "w": 110,
+   "h": 53
+  },
+  {
+   "alt": "{\\displaystyle A_{\\mathrm {i} }=a^{2}{\\f",
+   "x": 50,
+   "y": 31629,
+   "w": 113,
+   "h": 47
+  },
+  {
+   "alt": "{\\displaystyle V_{\\mathrm {i} }=a^{3}{\\f",
+   "x": 199,
+   "y": 31629,
+   "w": 106,
+   "h": 47
+  },
+  {
+   "alt": "",
+   "x": 107,
+   "y": 31681,
+   "w": 177,
+   "h": 164
+  },
+  {
+   "alt": "{\\displaystyle 2\\varphi ^{-1}}",
+   "x": 252,
+   "y": 32027,
+   "w": 42,
+   "h": 27
+  },
+  {
+   "alt": "{\\displaystyle (\\pm 1,\\pm 1,\\pm 1),\\ {\\b",
+   "x": 50,
+   "y": 32077,
+   "w": 464,
+   "h": 31
+  },
+  {
+   "alt": "{\\displaystyle (0,\\pm 1,\\pm \\varphi ),\\ ",
+   "x": 50,
+   "y": 32204,
+   "w": 317,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle 2/(2+\\varphi )}",
+   "x": 96,
+   "y": 32688,
+   "w": 81,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle \\varphi \\mathb",
+   "x": 224,
+   "y": 32817,
+   "w": 48,
+   "h": 25
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle x^{2}-x-1=0}",
+   "x": 90,
+   "y": 33116,
+   "w": 124,
+   "h": 22
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle x^{2}-5=0}",
+   "x": 259,
+   "y": 33116,
+   "w": 89,
+   "h": 22
+  },
+  {
+   "alt": "{\\displaystyle O(M(n))}",
+   "x": 247,
+   "y": 33195,
+   "w": 77,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle M(n)}",
+   "x": 72,
+   "y": 33221,
+   "w": 47,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle F_{25001}/F_{25000}}",
+   "x": 253,
+   "y": 33377,
+   "w": 107,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle 10{,}000}",
+   "x": 100,
+   "y": 33431,
+   "w": 54,
+   "h": 21
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle 2\\times 10^{13",
+   "x": 29,
+   "y": 33506,
+   "w": 252,
+   "h": 25
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle \\{1,\\zeta ,\\ze",
+   "x": 91,
+   "y": 33577,
+   "w": 127,
+   "h": 25
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle \\zeta =e^{2\\pi",
+   "x": 271,
+   "y": 33576,
+   "w": 79,
+   "h": 25
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle z^{5}=1}",
+   "x": 189,
+   "y": 33603,
+   "w": 54,
+   "h": 21
+  },
+  {
+   "alt": "{\\displaystyle \\mathbb {Q} {\\bigl (}{\\sq",
+   "x": 137,
+   "y": 33707,
+   "w": 60,
+   "h": 27
+  },
+  {
+   "alt": "{\\displaystyle z+{\\bar {z}}}",
+   "x": 24,
+   "y": 33764,
+   "w": 44,
+   "h": 18
+  },
+  {
+   "alt": "{\\displaystyle a+b\\varphi }",
+   "x": 24,
+   "y": 33788,
+   "w": 55,
+   "h": 22
+  },
+  {
+   "alt": "{\\displaystyle {\\begin{aligned}e^{0}+e^{",
+   "x": 50,
+   "y": 33839,
+   "w": 280,
+   "h": 94
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle z^{10}=1}",
+   "x": 133,
+   "y": 33972,
+   "w": 60,
+   "h": 21
+  },
+  {
+   "alt": "{\\displaystyle \\Gamma (z-1)=\\Gamma (z+1)",
+   "x": 117,
+   "y": 34068,
+   "w": 166,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle z=\\varphi }",
+   "x": 314,
+   "y": 34073,
+   "w": 48,
+   "h": 18
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle z=-\\varphi ^{-",
+   "x": 55,
+   "y": 34092,
+   "w": 82,
+   "h": 25
+  },
+  {
+   "alt": "{\\displaystyle 4\\log(\\varphi )}",
+   "x": 212,
+   "y": 34464,
+   "w": 66,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle |q|<1,}",
+   "x": 241,
+   "y": 34532,
+   "w": 61,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle R(q)={\\cfrac {q^{1/5}}{1+",
+   "x": 50,
+   "y": 34579,
+   "w": 254,
+   "h": 162
+  },
+  {
+   "alt": "{\\displaystyle R(e^{-2\\pi })={\\sqrt {\\va",
+   "x": 50,
+   "y": 34796,
+   "w": 449,
+   "h": 41
+  },
+  {
+   "alt": "{\\displaystyle R(e^{-2\\pi i/\\tau })={\\fr",
+   "x": 50,
+   "y": 34907,
+   "w": 232,
+   "h": 56
+  },
+  {
+   "alt": "{\\displaystyle \\operatorname {Im} \\tau >",
+   "x": 72,
+   "y": 34990,
+   "w": 72,
+   "h": 18
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle (e^{z})^{1/5}}",
+   "x": 180,
+   "y": 34986,
+   "w": 55,
+   "h": 27
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle \\tau \\mapsto R",
+   "x": 84,
+   "y": 35041,
+   "w": 108,
+   "h": 25
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle ab=\\pi ^{2},}",
+   "x": 24,
+   "y": 35119,
+   "w": 70,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle {\\begin{aligned}{\\Bigl (}",
+   "x": 50,
+   "y": 35172,
+   "w": 406,
+   "h": 85
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 35387,
+   "w": 252,
+   "h": 252
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 37185,
+   "w": 252,
+   "h": 259
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 38485,
+   "w": 252,
+   "h": 192
+  },
+  {
+   "alt": "{\\displaystyle 1\\mathbin {:} {\\sqrt {3}}",
+   "x": 183,
+   "y": 38984,
+   "w": 50,
+   "h": 24
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 39333,
+   "w": 252,
+   "h": 157
+  },
+  {
+   "alt": "",
+   "x": 99,
+   "y": 40515,
+   "w": 192,
+   "h": 276
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 41830,
+   "w": 252,
+   "h": 202
+  },
+  {
+   "alt": "{\\displaystyle 360^{\\circ }/\\varphi ^{2}",
+   "x": 24,
+   "y": 42567,
+   "w": 148,
+   "h": 27
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 42991,
+   "w": 252,
+   "h": 191
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 44674,
+   "w": 252,
+   "h": 179
+  },
+  {
+   "alt": "",
+   "x": 54,
+   "y": 45528,
+   "w": 282,
+   "h": 199
+  },
+  {
+   "alt": "",
+   "x": 69,
+   "y": 46562,
+   "w": 252,
+   "h": 157
+  },
+  {
+   "alt": "{\\displaystyle x^{2}=nx+1}",
+   "x": 115,
+   "y": 47966,
+   "w": 102,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle n=2}",
+   "x": 201,
+   "y": 48027,
+   "w": 47,
+   "h": 18
+  },
+  {
+   "alt": "{\\displaystyle x^{3}=x+1}",
+   "x": 230,
+   "y": 48052,
+   "w": 90,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle x^{3}=x^{2}+1}",
+   "x": 50,
+   "y": 48107,
+   "w": 99,
+   "h": 24
+  },
+  {
+   "alt": "{\\displaystyle \\textstyle -\\varphi ^{-1}",
+   "x": 70,
+   "y": 48314,
+   "w": 149,
+   "h": 26
+  },
+  {
+   "alt": "",
+   "x": 170,
+   "y": 65526,
+   "w": 50,
+   "h": 71
+  },
+  {
+   "alt": "Fibonacci word: detail of artwork by Sam",
+   "x": 273,
+   "y": 65568,
+   "w": 75,
+   "h": 187
+  }
+ ]
+}
