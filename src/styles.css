@@ -82,6 +82,7 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--red
   font-size: 0.8rem;
   line-height: 1.3;
 }
+.brand { font-weight: 700; color: var(--red, #b0231f); text-transform: none; }
 .masthead__kicker {
   display: flex; justify-content: space-between; gap: 1rem;
   margin: 0; padding-bottom: 0.4rem;
