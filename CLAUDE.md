@@ -26,15 +26,12 @@ every figure. Read `docs/program/PROGRAM.md`, then `STUDY-BRIEF.md`, then
 - Breakpoints live only in `src/lib/viewport.ts`. Three states, never two.
 - Study tools (`src/lib/tools.tsx`) are the only floating UI. Controls go
   there, on their own stacking layer; the study's stylesheet never styles them.
-  Grid outlines and band notes are off by default. The panel owns the
-  viewport's top-right corner: it is fixed at
-  `top: 12px; right: 12px` with `z-index: 2147483000` (`src/lib/tools.css`) —
-  a collapsed tab, and a 260px-wide panel when open — and nothing the study
-  draws may stack above it. A control the study puts in that corner is
-  covered and cannot be clicked, however it is positioned. Put dialog and
-  panel controls anywhere else; Study 02's album dialog uses a sticky bar at
-  the top left, and an expanded cell's dismiss control sits at its head's
-  left edge for the same reason.
+  Grid outlines and band notes are off by default. The panel is HIDDEN by
+  default since 2026-10-07 (`?tools=1` shows it; the g/n/m keys still work):
+  it used to be fixed at the viewport's top-right corner at
+  `z-index: 2147483000`, which is where a drill-down's Close belongs. Until
+  it has a better trigger, nothing is drawn in that corner over an open
+  cell, and an expanded cell's Close sits at the top right of the cell.
 - Expansion (`src/lib/expand.tsx`) is how a slot shows content it cannot hold:
   the band grows, nothing scrolls inside a box, and the covered content goes
   inert. Every photograph should be expandable — points of interaction are
