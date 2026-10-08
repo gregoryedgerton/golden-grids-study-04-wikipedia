@@ -254,3 +254,10 @@ a.box:hover .fit, a.box:focus-visible .fit { text-decoration: underline; text-de
 @container (max-width: 64px) or (max-height: 64px) {
   .box__label { display: none; }
 }
+
+/* The print-ad register's secondary: a hard ink outline, narrow caps, filled ink on hover. */
+:root {
+  --cta2-font: 700 14px/1.2 var(--label); --cta2-ls: 0.1em; --cta2-tt: uppercase; --cta2-pad: 8px 14px; --cta2-min-h: 40px;
+  --cta2-color: var(--ink); --cta2-bg: transparent; --cta2-border: 2px solid var(--ink); --cta2-radius: 0;
+  --cta2-hover-bg: var(--ink); --cta2-hover-color: var(--paper);
+}
