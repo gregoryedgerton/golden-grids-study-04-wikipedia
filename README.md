@@ -5,8 +5,7 @@
 An unaffiliated layout study of the Wikipedia article
 [Golden ratio](https://en.wikipedia.org/wiki/Golden_ratio): one long article
 taken apart into six pages of golden grids, one fact per square, with type
-set to the square, published under the author's own brand, GIFcommit. The program brief committed to Wikipedia as the series'
-honest failure; this is where that was tested. Built with
+set to the square, published under the author's own brand, GIFcommit. Built with
 [Golden Grids](https://github.com/gregoryedgerton/golden-grids) from the
 [study template](https://github.com/gregoryedgerton/golden-grids-study-template).
 
@@ -41,14 +40,9 @@ the body.
 The other pages are captured as `study-<page>-<width>.png`, with dark
 captures beside them.
 
-## The claim
+## Approach
 
-A text-driven article can be read as a hierarchy of facts rather than a
-column of prose if each square holds one fact and the type is set to the
-square. The study takes the lead and five sections (Calculation, History,
-Geometry, the Fibonacci relationship, Applications with Disputed
-observations) and leaves the proofs, the minimal polynomial, the conjugate,
-Penrose tilings and the solids unrebuilt.
+The reference is one long column of prose with headings, formulas and a few figures. The study divides the lead and five sections (Calculation, History, Geometry, the Fibonacci relationship, Applications with Disputed observations) into six pages and sets each fact in a square with its type fitted to the square. The proofs, the minimal polynomial, the conjugate, Penrose tilings and the solids are not rebuilt.
 
 ## Pages and bands
 
@@ -108,19 +102,22 @@ use container queries, so a unit square behaves the same at every width.
   measures synchronously after each write; the 0.01ms trick collapsed the
   type under iOS Reduce Motion.
 
-## What did not
+## Notes for review
 
-- **A derivation is a sequence and the grid ranked it anyway.** The
-  calculation page puts step 1 in a unit square and the result in a square
-  of side 5; the reading order is carried by the labels.
-- **Unit squares hold a word or a number and no more.** 105px at 1440 in a
-  six-square band, 46px at 390.
-- **Half the article is not rebuilt.** A proof is an argument, and an
-  argument is the thing a column of prose does best.
-- **Left·clockwise is missing**, against the catalogue's rule of eight.
-- **Not tested as a reading.** Whether anyone learns the golden ratio better
-  from six pages of squares than from the article has not been asked of a
-  reader, and nothing here has been tried with a screen-reader user.
+Observations for whoever reviews this study, recorded without a verdict. Whether the layout suits the page is assessed separately, after every study has been reviewed.
+
+- **Derivations.** The calculation page sets step 1 in a unit square and the result in a square of side 5; the order of the steps is carried by their labels.
+- **Smallest squares.** 105px at 1440 in a six-square band and 46px at 390; they hold a word or a number.
+- **Coverage.** About half the article is rebuilt; the proofs are not.
+- **Orientations.** Seven of the eight placement and direction pairs are used; left with clockwise is not.
+- **Readers.** It has not been read by a test reader or tried with a screen-reader user.
+
+## Disclosure
+
+Every page says what it is in three places, all read from
+[`src/study.json`](src/study.json): its title and description, a sticky notice
+at the top, and a disclosure at the very end listing the pages reviewed, what
+is real, what is invented or changed, and where each kind of asset came from.
 
 ## Study tools
 
