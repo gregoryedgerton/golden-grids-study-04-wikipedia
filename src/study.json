@@ -1,0 +1,57 @@
+{
+  "number": "04",
+  "name": "Wikipedia: Golden ratio",
+  "notice": "A layout study, not Wikipedia: its Golden ratio article reset as six pages of Golden Grids by GIFcommit. Text adapted under CC BY-SA 4.0; not affiliated with Wikipedia or the Wikimedia Foundation.",
+  "pages": {
+    "calculation": "Calculation",
+    "fibonacci": "Fibonacci",
+    "geometry": "Geometry",
+    "history": "History",
+    "index": "Introduction",
+    "world": "In the world"
+  },
+  "summary": "One long Wikipedia article, on the golden ratio, divided into six pages and set in golden grids with type fitted to each square.",
+  "reviewed": {
+    "date": "October 5, 2026",
+    "method": "Captured signed out at 390, 820 and 1440 pixels, with the article's wikitext saved at the revision named below.",
+    "pages": [
+      {
+        "label": "Wikipedia, \"Golden ratio\"",
+        "url": "https://en.wikipedia.org/wiki/Golden_ratio"
+      },
+      {
+        "label": "The revision used (1378520549)",
+        "url": "https://en.wikipedia.org/w/index.php?title=Golden_ratio&oldid=1378520549"
+      }
+    ]
+  },
+  "real": [
+    "The text, which is adapted from the Wikipedia article by its contributors: shortened and rearranged, not rewritten in substance.",
+    "The mathematics, dates and names, as the article gives them."
+  ],
+  "invented": [
+    "The division into six pages, the headings' order and every figure. The diagrams and charts were drawn for this study.",
+    "The publisher's name. GIFcommit is the author's brand; nothing of Wikipedia's design or marks is used.",
+    "Any error introduced by shortening is this study's, not Wikipedia's."
+  ],
+  "assets": [
+    {
+      "what": "Text",
+      "source": "Wikipedia contributors, \"Golden ratio\"; this adaptation is offered under the same licence",
+      "url": "https://en.wikipedia.org/w/index.php?title=Golden_ratio&action=history",
+      "licence": "CC BY-SA 4.0"
+    },
+    {
+      "what": "Figures",
+      "source": "Original drawings made for the study."
+    },
+    {
+      "what": "Typefaces",
+      "source": "Fraunces and Archivo Narrow",
+      "licence": "SIL Open Font License"
+    }
+  ],
+  "owner": "Wikipedia or the Wikimedia Foundation",
+  "repo": "https://github.com/gregoryedgerton/golden-grids-study-04-wikipedia",
+  "updated": "October 9, 2026"
+}

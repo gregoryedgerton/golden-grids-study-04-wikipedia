@@ -1,5 +1,6 @@
 import { useEffect, type ReactNode } from "react";
 import { Tools } from "./tools";
+import { StudyBanner, StudyDisclosure } from "./study";
 import "../styles.css";
 
 /**
@@ -50,6 +51,7 @@ export function Page({ current, kicker, title, standfirst, children }: {
     <>
       {/* The skip link is the first thing in the tab order, before the tools. */}
       <a className="skip" href="#content">Skip to content</a>
+      <StudyBanner />
       <Tools />
       <header className="masthead">
         <p className="masthead__kicker">
@@ -83,21 +85,7 @@ export function Page({ current, kicker, title, standfirst, children }: {
         )}
       </nav>
 
-      <footer className="colophon">
-        <p>
-          An unaffiliated layout study of the Wikipedia article{" "}
-          <a href={ARTICLE}>Golden ratio</a>. The text is adapted from that article
-          (<a href={REVISION}>revision 1378520549</a>, 2026), by its{" "}
-          <a href="https://en.wikipedia.org/w/index.php?title=Golden_ratio&action=history">contributors</a>,
-          under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; it has been
-          shortened and rearranged, and this page is offered under the same licence. The diagrams and
-          charts are original. Nothing of Wikipedia's design or marks is reproduced; the pages are published
-          under the author's own brand, GIFcommit. Built with{" "}
-          <a href="https://github.com/gregoryedgerton/golden-grids">Golden Grids</a> ·{" "}
-          <a href="https://www.npmjs.com/package/@gifcommit/golden-grids">npm</a> ·{" "}
-          <a href="https://gregoryedgerton.github.io/golden-grids/">generator</a>.
-        </p>
-      </footer>
+      <StudyDisclosure />
     </>
   );
 }
