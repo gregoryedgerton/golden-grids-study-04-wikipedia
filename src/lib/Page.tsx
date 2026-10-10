@@ -4,10 +4,12 @@ import { StudyBanner, StudyDisclosure } from "./study";
 import "../styles.css";
 
 /**
- * The shell: a masthead, the contents strip, the six parts, and the
- * disclosure. The reference is one long page with a table of contents that
- * follows the reader down it; so is this. The strip stays under the notice,
- * its links go to the parts of this page, and it marks the part in view.
+ * The shell, after the reference's own: the site's name and a search at the
+ * top, the article's title over its tabs (Article and Talk; Read, View source
+ * and View history), the line saying where the text is from, a table of
+ * contents that follows the reader down the page, the six parts, and the
+ * disclosure. It does not say "layout study" or name the study here: the
+ * notice above it and the disclosure below it do that on every page.
  */
 export const PARTS = [
   { id: "introduction", short: "Introduction", bands: ["lead", "representations", "contents"] },
@@ -80,6 +82,7 @@ function Contents() {
 
   return (
     <nav className="contents" aria-label="Contents" ref={ref}>
+      <span className="contents__label" aria-hidden="true">Contents</span>
       <ol>
         {PARTS.map((p) => <li key={p.id}><a href={`#${p.id}`} aria-current={p.id === here ? "location" : undefined}>{p.short}</a></li>)}
       </ol>
@@ -87,7 +90,35 @@ function Contents() {
   );
 }
 
-export function Page({ kicker, title, standfirst, children }: { kicker: string; title: string; standfirst: string; children: ReactNode }) {
+/**
+ * The reference's search box, working on this page: it lists the parts and
+ * their bands, and going to one moves there. Nothing is sent anywhere.
+ */
+function Search() {
+  const [q, setQ] = useState("");
+  const [none, setNone] = useState(false);
+  const places = () => [...document.querySelectorAll<HTMLElement>("section.part, section.band")].map((el) => ({ id: el.id, text: el.querySelector("h2, h3")?.textContent ?? el.id }));
+  const [list, setList] = useState<{ id: string; text: string }[]>([]);
+  useEffect(() => { setList(places()); }, []);
+  const go = () => {
+    const needle = q.trim().toLowerCase(); if (!needle) return;
+    const hit = list.find((p) => p.text.toLowerCase() === needle) ?? list.find((p) => p.text.toLowerCase().includes(needle))
+      ?? [...document.querySelectorAll<HTMLElement>("section.band")].map((el) => ({ id: el.id, text: el.textContent ?? "" })).find((p) => p.text.toLowerCase().includes(needle));
+    setNone(!hit);
+    if (hit) location.hash = hit.id;
+  };
+  return (
+    <form className="search" role="search" onSubmit={(e) => { e.preventDefault(); go(); }}>
+      <label htmlFor="search" className="visually-hidden">Search this article</label>
+      <input id="search" type="search" list="search-places" placeholder="Search GIFipedia" value={q} onChange={(e) => { setQ(e.target.value); setNone(false); }} />
+      <datalist id="search-places">{list.map((p) => <option key={p.id} value={p.text} />)}</datalist>
+      <button type="submit">Search</button>
+      <span className="search__none" role="status">{none ? "Nothing on this page matches." : ""}</span>
+    </form>
+  );
+}
+
+export function Page({ title, standfirst, children }: { title: string; standfirst: string; children: ReactNode }) {
   // Display type is hidden (styles.css) until the web fonts are in, so it
   // never flashes from the fallback face. `fonts.ready` resolves whether the
   // fonts loaded or failed; a browser without the API shows the text at once.
@@ -109,16 +140,41 @@ export function Page({ kicker, title, standfirst, children }: { kicker: string; 
       <a className="skip" href="#content">Skip to content</a>
       <StudyBanner />
       <Tools />
-      <header className="masthead">
-        <p className="masthead__kicker">
-          <span><strong className="brand">GIFipedia</strong> · Layout study 04</span>
-          <span>{kicker}</span>
-        </p>
-        <h1 className="masthead__title">{title}</h1>
-        <p className="masthead__standfirst">{standfirst}</p>
+      {/* The reference's own header: its name and a search at the top, the
+          article's title over two rows of tabs, and where the text is from. */}
+      <header className="site">
+        <div className="site__bar">
+          <a className="wordmark" href="#top">
+            <span className="wordmark__name">GIFipedia</span>
+            <span className="wordmark__tag">The Free Encyclopedia</span>
+          </a>
+          <Search />
+          <ul className="site__links">
+            <li><a href={ARTICLE}>Read on Wikipedia</a></li>
+            <li><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+          </ul>
+        </div>
       </header>
+      <main id="content">
+      <div className="article" id="top">
+        <h1 className="article__title">{title}</h1>
+        <div className="tabs">
+          <ul className="tabs__left" aria-label="Views of this subject">
+            <li><a href="#top" aria-current="page">Article</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Talk:Golden_ratio">Talk</a></li>
+          </ul>
+          <ul className="tabs__right" aria-label="Views of this article">
+            <li><a href="#top" aria-current="page">Read</a></li>
+            <li><a href={REVISION}>View source</a></li>
+            <li><a href="https://en.wikipedia.org/w/index.php?title=Golden_ratio&action=history">View history</a></li>
+          </ul>
+        </div>
+        <p className="article__from">Adapted from Wikipedia, the free encyclopedia</p>
+        <p className="article__standfirst">{standfirst}</p>
+      </div>
       <Contents />
-      <main id="content">{children}</main>
+      {children}
+      </main>
       <StudyDisclosure />
     </>
   );

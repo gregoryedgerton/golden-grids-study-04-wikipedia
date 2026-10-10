@@ -12,7 +12,6 @@ import { InTheWorld } from "./parts/world";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Page
-      kicker="Wikipedia · Golden ratio"
       title="Golden ratio"
       standfirst="In mathematics, two quantities are in the golden ratio if their ratio is the same as the ratio of their sum to the larger of the two quantities. The Greek letter φ denotes it. It has been studied since Euclid, named divine by Pacioli, found in the pentagon, the Fibonacci numbers and the arrangement of leaves, and claimed, often wrongly, in art, architecture and nature."
     >
