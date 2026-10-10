@@ -1,14 +1,13 @@
 import { GoldenGrid, GoldenBox } from "@gifcommit/golden-grids";
 import type { PlacementValue } from "@gifcommit/golden-grids";
-import { mount } from "../main";
-import { Page } from "../lib/Page";
+import { Part } from "../lib/Page";
 import { Band } from "../bands/Band";
 import { Fact } from "../lib/boxes";
 import { useViewport, pick } from "../lib/viewport";
 import { useExpandGroup } from "../lib/expand";
 
 /**
- * Page II — Calculation. The article derives φ in five displayed equations
+ * Part II — Calculation. The article derives φ in five displayed equations
  * read top to bottom. A derivation is a sequence, and a golden grid is a
  * hierarchy, so the band does not pretend the steps are ranked: the result
  * takes the largest square because it is what the section exists to reach,
@@ -49,8 +48,8 @@ function Derivation() {
               ),
               source: "Adapted from the section Calculation.",
               related: [
-                { href: "./fibonacci.html#fraction", label: "φ as a continued fraction" },
-                { href: "./index.html#representations", label: "The three representations" },
+                { href: "#fraction", label: "φ as a continued fraction" },
+                { href: "#representations", label: "The three representations" },
               ],
             }}
           >
@@ -68,7 +67,7 @@ function Derivation() {
                 </>
               ),
               source: "Adapted from the section Minimal polynomial.",
-              related: [{ href: "./geometry.html#pentagon", label: "Constructing φ in the pentagon" }],
+              related: [{ href: "#pentagon", label: "Constructing φ in the pentagon" }],
             }}
           >{"φ² − φ − 1\n= 0"}</Fact>
         </GoldenBox>
@@ -79,7 +78,7 @@ function Derivation() {
           <Fact label="Step 2 · substitute" fitClass="fit--num" tone="deep" spoken="phi plus one, over phi, equals phi">{"(φ + 1) / φ\n= φ"}</Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Step 1 · define" fitClass="fit--num" link={{ href: "./index.html#lead", label: "§ I" }} spoken="a plus b, over a, equals a over b, equals phi">{"(a + b) / a\n= a / b = φ"}</Fact>
+          <Fact label="Step 1 · define" fitClass="fit--num" link={{ href: "#lead", label: "§ I" }} spoken="a plus b, over a, equals a over b, equals phi">{"(a + b) / a\n= a / b = φ"}</Fact>
         </GoldenBox>
       </GoldenGrid>
     </Band>
@@ -120,14 +119,16 @@ function Roots() {
   );
 }
 
-mount(
-  <Page
-    current="calculation.html"
-    kicker="Wikipedia · Golden ratio · § Calculation"
-    title="Calculation"
-    standfirst="To determine φ as a number, start from the definition and divide through by the shorter quantity. Four steps of algebra turn the proportion into a quadratic equation, and the quadratic formula gives two roots: one is the golden ratio, the other its conjugate."
-  >
-    <Derivation />
-    <Roots />
-  </Page>
-);
+export function Calculation() {
+  return (
+    <Part
+      id="calculation"
+      kicker="§ Calculation"
+      title="Calculation"
+      standfirst="To determine φ as a number, start from the definition and divide through by the shorter quantity. Four steps of algebra turn the proportion into a quadratic equation, and the quadratic formula gives two roots: one is the golden ratio, the other its conjugate."
+    >
+      <Derivation />
+      <Roots />
+    </Part>
+  );
+}

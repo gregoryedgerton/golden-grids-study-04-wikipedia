@@ -4,12 +4,14 @@ Guidance for agents working in a Golden Grids layout study.
 
 ## What this repo is
 
-Study 04: the Wikipedia article *Golden ratio*, as six pages of golden grids
-with type fitted to each square. SEVERAL pages, not one: `index.html`,
-`calculation.html`, `history.html`, `geometry.html`, `fibonacci.html`,
-`world.html`, each a Vite entry (`vite.config.ts`) with its own
-`src/pages/<page>.tsx`. No router: pages link with plain relative hrefs.
-`src/lib/Page.tsx` is the shared shell (masthead, contents strip, colophon
+Study 04: the Wikipedia article *Golden ratio*, as ONE page in six parts of
+golden grids with type fitted to each square (it was six pages until
+2026-10-09; Greg asked for one). `src/main.tsx` mounts the parts in order;
+each is `src/parts/<part>.tsx`, a `Part` (kicker, h2, standfirst) holding its
+bands, whose titles are h3. Links between parts are anchors (`#pentagon`).
+`public/<part>.html` are redirects from the old page addresses. No header
+carries a count ("No. 1 of 6" was removed).
+`src/lib/Page.tsx` is the shell (masthead, sticky contents strip, `Part`, colophon
 with the CC BY-SA attribution). `src/lib/fit.tsx` fits type to its box.
 `src/lib/boxes.tsx` holds the three box kinds. `src/diagrams/index.tsx` is
 every figure. Read `docs/program/PROGRAM.md`, then `STUDY-BRIEF.md`, then
@@ -62,9 +64,11 @@ every figure. Read `docs/program/PROGRAM.md`, then `STUDY-BRIEF.md`, then
 - `Fit` sizes by binary search between 8px and 320px against the PARENT's
   content box. It must be the only child that sets the headline's size;
   do not give `.fit` a font-size in CSS.
-- Every page has the same `Page` shell and the same contents strip; the
-  colophon's attribution is required on all six.
-- The Fibonacci page's seven-square band prints each square's side in it.
+- The contents strip sticks under the notice and publishes `--contents-h`;
+  an opened square's head and `scroll-padding-top` add it. `PARTS` in
+  `Page.tsx` lists each part's band ids: add a band's id there or its § links
+  lose their spoken name.
+- The Fibonacci part's seven-square band prints each square's side in it.
   If the range changes, the numbers must change with it.
 - At 390 the Contents band keeps all six squares and turns portrait. A
   smaller `to` silently drops the last section, because extra children are

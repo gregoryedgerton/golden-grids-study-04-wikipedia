@@ -1,4 +1,3 @@
-import { resolve } from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { studyMeta } from "./study.meta";
@@ -13,16 +12,9 @@ function pagesBase(): string {
   return `/${repo}/`;
 }
 
-// Several pages, no router: each HTML file is its own entry and links to the
-// others with plain relative hrefs, which is what the reference does too.
-const pages = ["index", "calculation", "history", "geometry", "fibonacci", "world"];
-
+// One page. The five former pages are static redirects in public/, so links
+// to them still arrive at the right part of this one.
 export default defineConfig({
   base: pagesBase(),
   plugins: [react(), studyMeta()],
-  build: {
-    rollupOptions: {
-      input: Object.fromEntries(pages.map((p) => [p, resolve(__dirname, `${p}.html`)])),
-    },
-  },
 });

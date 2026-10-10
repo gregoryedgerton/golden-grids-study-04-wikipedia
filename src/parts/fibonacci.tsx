@@ -1,7 +1,6 @@
 import { GoldenGrid, GoldenBox } from "@gifcommit/golden-grids";
 import type { PlacementValue } from "@gifcommit/golden-grids";
-import { mount } from "../main";
-import { Page } from "../lib/Page";
+import { Part } from "../lib/Page";
 import { Band } from "../bands/Band";
 import { Fact, Figure } from "../lib/boxes";
 import { useViewport, pick } from "../lib/viewport";
@@ -9,7 +8,7 @@ import { useExpandGroup } from "../lib/expand";
 import { RatioChart, ContinuedFraction } from "../diagrams";
 
 /**
- * Page V — the Fibonacci numbers. This is the one page where the grid is
+ * Part V — the Fibonacci numbers. This is the one page where the grid is
  * not a metaphor for its content but the content itself: the library lays
  * out squares whose sides are consecutive Fibonacci numbers, so a band of
  * seven squares IS the sequence 1, 1, 2, 3, 5, 8, 13, and the numbers
@@ -70,8 +69,8 @@ function Convergence() {
               ),
               source: "Adapted from the section Relationship to Fibonacci and Lucas numbers.",
               related: [
-                { href: "./history.html#chronology", label: "Jacob and Kepler, who noticed" },
-                { href: "./geometry.html#rectangle", label: "The golden rectangle" },
+                { href: "#chronology", label: "Jacob and Kepler, who noticed" },
+                { href: "#rectangle", label: "The golden rectangle" },
               ],
             }}
             spoken="F of n plus one, over F of n, tends to phi"
@@ -112,15 +111,17 @@ function Fraction() {
   );
 }
 
-mount(
-  <Page
-    current="fibonacci.html"
-    kicker="Wikipedia · Golden ratio · § Relationship to Fibonacci and Lucas numbers"
-    title="Fibonacci"
-    standfirst="Fibonacci numbers and Lucas numbers have an intricate relationship with the golden ratio. The ratio of each term to the one before it approaches φ, alternately from below and above; φ itself is the continued fraction of all ones, whose convergents are those ratios; and Binet's formula writes every Fibonacci number in terms of φ."
-  >
-    <Sequence />
-    <Convergence />
-    <Fraction />
-  </Page>
-);
+export function Fibonacci() {
+  return (
+    <Part
+      id="fibonacci"
+      kicker="§ Relationship to Fibonacci and Lucas numbers"
+      title="Fibonacci"
+      standfirst="Fibonacci numbers and Lucas numbers have an intricate relationship with the golden ratio. The ratio of each term to the one before it approaches φ, alternately from below and above; φ itself is the continued fraction of all ones, whose convergents are those ratios; and Binet's formula writes every Fibonacci number in terms of φ."
+    >
+      <Sequence />
+      <Convergence />
+      <Fraction />
+    </Part>
+  );
+}

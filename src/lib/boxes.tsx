@@ -1,15 +1,15 @@
 import type { ReactNode } from "react";
 import { Fit } from "./fit";
 import { ExpandedCell, type ExpandGroup } from "./expand";
-import { PAGES } from "./Page";
+import { PARTS } from "./Page";
 
 /** The accessible name of a section link: "Continued in section IV, Geometry". */
 function sectionName(href: string): string | undefined {
-  const file = href.replace(/^\.\//, "").split("#")[0];
-  const i = PAGES.findIndex((p) => p.file === file);
+  const id = href.replace(/^#/, "");
+  const i = PARTS.findIndex((p) => p.id === id || (p.bands as readonly string[]).includes(id));
   if (i < 0) return undefined;
   const roman = ["I", "II", "III", "IV", "V", "VI"][i];
-  return `Continued in section ${roman}, ${PAGES[i].title}`;
+  return `Continued in section ${roman}, ${PARTS[i].short}`;
 }
 
 /**
@@ -20,7 +20,7 @@ function sectionName(href: string): string | undefined {
  */
 export type Tone = "paper" | "deep" | "red" | "ink";
 
-/** A square on another page that carries this fact further. */
+/** A square in another part of the page that carries this fact further. */
 export interface Related { href: string; label: string }
 
 const tone = (t?: Tone) => (t && t !== "paper" ? ` box--${t}` : "");

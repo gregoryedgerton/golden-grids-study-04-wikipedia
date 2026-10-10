@@ -1,7 +1,6 @@
 import { GoldenGrid, GoldenBox } from "@gifcommit/golden-grids";
 import type { PlacementValue } from "@gifcommit/golden-grids";
-import { mount } from "../main";
-import { Page } from "../lib/Page";
+import { Part } from "../lib/Page";
 import { Band } from "../bands/Band";
 import { Fact, Figure } from "../lib/boxes";
 import { useViewport, pick } from "../lib/viewport";
@@ -9,7 +8,7 @@ import { useExpandGroup } from "../lib/expand";
 import { GoldenRectangle, Pentagram, KeplerTriangle, Phyllotaxis, GoldenAngle } from "../diagrams";
 
 /**
- * Page IV — Geometry. The article's longest section, and the one this
+ * Part IV — Geometry. The article's longest section, and the one this
  * layout system comes from. Each band pairs a figure with the facts the
  * article states about it; the figures are drawn from the mathematics,
  * not copied.
@@ -46,7 +45,7 @@ function Rectangle() {
                 </>
               ),
               source: "Adapted from the section Golden rectangle.",
-              related: [{ href: "./fibonacci.html#sequence", label: "The Fibonacci sequence" }],
+              related: [{ href: "#sequence", label: "The Fibonacci sequence" }],
             }}
           >1 : φ</Fact>
         </GoldenBox>
@@ -61,7 +60,7 @@ function Rectangle() {
                 </>
               ),
               source: "Adapted from the section Golden spiral.",
-              related: [{ href: "./world.html#disputed", label: "The nautilus shell, which is not one" }],
+              related: [{ href: "#disputed", label: "The nautilus shell, which is not one" }],
             }}
           >{"r =\nφ^(2θ/π)"}</Fact>
         </GoldenBox>
@@ -105,7 +104,7 @@ function Pentagon() {
                 </>
               ),
               source: "Adapted from the section Pentagon and pentagram.",
-              related: [{ href: "./history.html#chronology", label: "Why the Greeks met it first" }],
+              related: [{ href: "#chronology", label: "Why the Greeks met it first" }],
             }}
           >a / b = φ</Fact>
         </GoldenBox>
@@ -179,23 +178,25 @@ function Angle() {
           <Fact label="Golden angle" tone="red" fitClass="fit--num" source="360° / φ²">137.5°</Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="In plants" tone="deep" body={<p>The spacing of leaf shoots around a stem that keeps each from shading the one below.</p>} link={{ href: "./world.html#applications", label: "§ VI" }}>Phyllotaxis</Fact>
+          <Fact label="In plants" tone="deep" body={<p>The spacing of leaf shoots around a stem that keeps each from shading the one below.</p>} link={{ href: "#applications", label: "§ VI" }}>Phyllotaxis</Fact>
         </GoldenBox>
       </GoldenGrid>
     </Band>
   );
 }
 
-mount(
-  <Page
-    current="geometry.html"
-    kicker="Wikipedia · Golden ratio · § Geometry"
-    title="Geometry"
-    standfirst="The golden ratio appears wherever fivefold symmetry does. It is the ratio of a pentagon's diagonal to its side, the proportion of the golden rectangle and the growth factor of the golden spiral, the common ratio of the Kepler triangle's sides, and the divisor of the circle that gives the golden angle found in the arrangement of leaves."
-  >
-    <Rectangle />
-    <Pentagon />
-    <Kepler />
-    <Angle />
-  </Page>
-);
+export function Geometry() {
+  return (
+    <Part
+      id="geometry"
+      kicker="§ Geometry"
+      title="Geometry"
+      standfirst="The golden ratio appears wherever fivefold symmetry does. It is the ratio of a pentagon's diagonal to its side, the proportion of the golden rectangle and the growth factor of the golden spiral, the common ratio of the Kepler triangle's sides, and the divisor of the circle that gives the golden angle found in the arrangement of leaves."
+    >
+      <Rectangle />
+      <Pentagon />
+      <Kepler />
+      <Angle />
+    </Part>
+  );
+}

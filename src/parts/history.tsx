@@ -1,14 +1,13 @@
 import { GoldenGrid, GoldenBox } from "@gifcommit/golden-grids";
 import type { PlacementValue } from "@gifcommit/golden-grids";
-import { mount } from "../main";
-import { Page } from "../lib/Page";
+import { Part } from "../lib/Page";
 import { Band } from "../bands/Band";
 import { Fact } from "../lib/boxes";
 import { useViewport, pick } from "../lib/viewport";
 import { useExpandGroup } from "../lib/expand";
 
 /**
- * Page III — History. The section is a chronology in prose. A chronology
+ * Part III — History. The section is a chronology in prose. A chronology
  * has an order but no ranking; the grid is given one anyway, so the choice
  * of who takes the largest square is an editorial claim and is stated as
  * one: Euclid, because the article's own first definition is his.
@@ -48,8 +47,8 @@ function Chronology() {
               ),
               source: "Adapted from the section History.",
               related: [
-                { href: "./geometry.html#pentagon", label: "Why the Greeks met it: the pentagon" },
-                { href: "./world.html#disputed", label: "What the Greeks did not do with it" },
+                { href: "#pentagon", label: "Why the Greeks met it: the pentagon" },
+                { href: "#disputed", label: "What the Greeks did not do with it" },
               ],
             }}
           >
@@ -67,7 +66,7 @@ function Chronology() {
                 </>
               ),
               source: "Adapted from the section History.",
-              related: [{ href: "./world.html#applications", label: "Where the ratio was used by intent" }],
+              related: [{ href: "#applications", label: "Where the ratio was used by intent" }],
             }}
           >
             Divina proportione
@@ -85,8 +84,8 @@ function Chronology() {
               ),
               source: "Adapted from the section History.",
               related: [
-                { href: "./fibonacci.html#convergence", label: "The convergence, charted" },
-                { href: "./geometry.html#kepler", label: "The Kepler triangle" },
+                { href: "#convergence", label: "The convergence, charted" },
+                { href: "#kepler", label: "The Kepler triangle" },
               ],
             }}
           >
@@ -100,7 +99,7 @@ function Chronology() {
           <Fact label="1910 · Mark Barr" tone="deep" fitClass="fit--num">φ</Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="1973–74 · Roger Penrose" tone="red" link={{ href: "./geometry.html#pentagon", label: "§ IV" }}>Penrose tiling</Fact>
+          <Fact label="1973–74 · Roger Penrose" tone="red" link={{ href: "#pentagon", label: "§ IV" }}>Penrose tiling</Fact>
         </GoldenBox>
       </GoldenGrid>
     </Band>
@@ -135,14 +134,16 @@ function Quotation() {
   );
 }
 
-mount(
-  <Page
-    current="history.html"
-    kicker="Wikipedia · Golden ratio · § History"
-    title="History"
-    standfirst="The golden ratio was defined by Euclid around 300 BC, used by Abu Kamil and Fibonacci in the geometry of pentagons, named the divine proportion by Luca Pacioli in 1509, connected to the Fibonacci numbers by Simon Jacob and Johannes Kepler, called the golden section in 1789, given the letter φ by Mark Barr around 1910, and found again in Roger Penrose's tilings in the 1970s."
-  >
-    <Chronology />
-    <Quotation />
-  </Page>
-);
+export function History() {
+  return (
+    <Part
+      id="history"
+      kicker="§ History"
+      title="History"
+      standfirst="The golden ratio was defined by Euclid around 300 BC, used by Abu Kamil and Fibonacci in the geometry of pentagons, named the divine proportion by Luca Pacioli in 1509, connected to the Fibonacci numbers by Simon Jacob and Johannes Kepler, called the golden section in 1789, given the letter φ by Mark Barr around 1910, and found again in Roger Penrose's tilings in the 1970s."
+    >
+      <Chronology />
+      <Quotation />
+    </Part>
+  );
+}

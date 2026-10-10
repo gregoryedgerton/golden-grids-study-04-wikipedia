@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { useHeadingLevel } from "../lib/Page";
 
 /**
  * A band is one small-range grid with one editorial job. Bands stack; they do
@@ -22,10 +23,11 @@ export function Band({
   kind?: "rule" | "open";
   children: ReactNode;
 }) {
+  const Heading = useHeadingLevel() === 3 ? "h3" : "h2";
   return (
     <section className={`band ${kind}`} id={id} aria-labelledby={`${id}-title`}>
       <header className="band__header">
-        <h2 id={`${id}-title`} className="band__title">{title}</h2>
+        <Heading id={`${id}-title`} className="band__title">{title}</Heading>
         {lesson && <p className="band__lesson">{lesson}</p>}
         {note && <p className="band__note">{note}{cap ? ` · width capped at ${cap}` : ""}</p>}
       </header>

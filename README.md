@@ -4,7 +4,7 @@
 
 An unaffiliated layout study of the Wikipedia article
 [Golden ratio](https://en.wikipedia.org/wiki/Golden_ratio): one long article
-taken apart into six pages of golden grids, one fact per square, with type
+set as one page in six parts of golden grids, one fact per square, with type
 set to the square, published under a parody name, GIFipedia. Built with
 [Golden Grids](https://github.com/gregoryedgerton/golden-grids) from the
 [study template](https://github.com/gregoryedgerton/golden-grids-study-template).
@@ -31,31 +31,30 @@ and a plain extract the pages were cut from). The article is one column of
 headings, 177 images of which most are rendered formulae, one type size in
 the body.
 
-| Width | Reference | Study, page I |
+| Width | Reference | Study |
 | --- | --- | --- |
-| 390px | ![](captures/reference-390.png) | ![](captures/study-index-390.png) |
-| 820px | ![](captures/reference-820.png) | ![](captures/study-index-820.png) |
-| 1440px | ![](captures/reference-1440.png) | ![](captures/study-index-1440.png) |
+| 390px | ![](captures/reference-390.png) | ![](captures/study-390.jpg) |
+| 820px | ![](captures/reference-820.png) | ![](captures/study-820.jpg) |
+| 1440px | ![](captures/reference-1440.png) | ![](captures/study-1440.jpg) |
 
-The other pages are captured as `study-<page>-<width>.png`, with dark
-captures beside them.
+The study is 18,800px tall at 1440 and 14,840px at 390.
 
 ## Approach
 
-The reference is one long column of prose with headings, formulas and a few figures. The study divides the lead and five sections (Calculation, History, Geometry, the Fibonacci relationship, Applications with Disputed observations) into six pages and sets each fact in a square with its type fitted to the square. The proofs, the minimal polynomial, the conjugate, Penrose tilings and the solids are not rebuilt.
+The reference is one long column of prose with headings, formulas and a few figures. The study divides the lead and five sections (Calculation, History, Geometry, the Fibonacci relationship, Applications with Disputed observations) into six parts of one page and sets each fact in a square with its type fitted to the square. The proofs, the minimal polynomial, the conjugate, Penrose tilings and the solids are not rebuilt.
 
 ## Pages and bands
 
-Six HTML files, no router; plain relative links, a contents strip and
-previous/next on every page. Squares are given in units of each band's unit
+One HTML file in six parts. A contents strip stays under the notice as the
+page scrolls, links to each part and marks the one in view; the five former
+page addresses redirect to their parts. Squares are given in units of each band's unit
 square.
 
-| Page | Band | Range · placement · clockwise | Squares | What it holds |
+| Part | Band | Range · placement · clockwise | Squares | What it holds |
 | --- | --- | --- | --- | --- |
 | I Golden ratio | The number | 1–4 · right · cw (1–3 bottom at 390) | 3, 2, 1, 1 | Definition in the hero; the line figure; the names; the identity |
 | | Representations | 1–3 · bottom · ccw | 2, 1, 1 | Decimal, algebraic form, continued fraction |
-| | Contents | 2–6 · left · ccw (top at 390) | placeholder 1; 1, 2, 3, 5, 8 | Links to the five section pages; the placeholder carries the letter φ |
-| | The golden rectangle | 1–1 · single | 1 | The figure, capped at 48rem |
+| | Contents | 2–6 · left · ccw (top at 390) | placeholder 1; 1, 2, 3, 5, 8 | Links to the five parts that follow; the placeholder carries the letter φ |
 | II Calculation | From the definition to the number | 1–5 · top · ccw (left at 390) | 5, 3, 2, 1, 1 | Result in the hero; four numbered steps |
 | | The two roots | 1–2 · right | 1, 1 | Two roots of equal standing |
 | III History | Who studied it, and when | 1–6 · right · cw (1–5 left at 390) | 8, 5, 3, 2, 1, 1 | Euclid to Penrose |
@@ -86,8 +85,8 @@ use container queries, so a unit square behaves the same at every width.
   Display type is held until Fraunces and Archivo Narrow have loaded so it
   does not flash.
 - **Depth in flow.** Sixteen squares expand to the article's passage at
-  reading measure, each ending with where the fact continues on other
-  pages; § marks on squares link to the band they continue in
+  reading measure, each ending with where the fact continues elsewhere
+  on the page; § marks on squares link to the band they continue in
   ([`src/lib/expand.tsx`](src/lib/expand.tsx), [`src/lib/boxes.tsx`](src/lib/boxes.tsx)).
 - **Register.** Old print advertising, not the encyclopaedia: cream stock,
   one black, one red, Fraunces for display and text, Archivo Narrow for
@@ -106,10 +105,12 @@ use container queries, so a unit square behaves the same at every width.
 
 Observations for whoever reviews this study, recorded without a verdict. Whether the layout suits the page is assessed separately, after every study has been reviewed.
 
-- **Derivations.** The calculation page sets step 1 in a unit square and the result in a square of side 5; the order of the steps is carried by their labels.
+- **Derivations.** The calculation part sets step 1 in a unit square and the result in a square of side 5; the order of the steps is carried by their labels.
 - **Smallest squares.** 105px at 1440 in a six-square band and 46px at 390; they hold a word or a number.
 - **Coverage.** About half the article is rebuilt; the proofs are not.
 - **Orientations.** Seven of the eight placement and direction pairs are used; left with clockwise is not.
+- **Length.** As one page it is 18,800px tall at 1440 against the reference's 29,989px, and 14,840px at 390 against 66,232px; about half the article is rebuilt.
+- **One page.** It was six pages until 2026-10-09. The golden rectangle figure that closed the first page is now only in Geometry.
 - **Readers.** It has not been read by a test reader or tried with a screen-reader user.
 
 ## Disclosure
@@ -132,6 +133,6 @@ npm install
 npm run dev
 ```
 
-`npm run build` type-checks and builds all six pages to `dist/`; pushing to
+`npm run build` type-checks and builds the page to `dist/`; pushing to
 `main` deploys to GitHub Pages. The library is consumed from npm at its
 published version.

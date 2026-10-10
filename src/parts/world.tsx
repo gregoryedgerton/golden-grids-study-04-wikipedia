@@ -1,14 +1,13 @@
 import { GoldenGrid, GoldenBox } from "@gifcommit/golden-grids";
 import type { PlacementValue } from "@gifcommit/golden-grids";
-import { mount } from "../main";
-import { Page } from "../lib/Page";
+import { Part } from "../lib/Page";
 import { Band } from "../bands/Band";
 import { Fact } from "../lib/boxes";
 import { useViewport, pick } from "../lib/viewport";
 import { useExpandGroup } from "../lib/expand";
 
 /**
- * Page VI — Applications and disputed observations. The article keeps
+ * Part VI — Applications and disputed observations. The article keeps
  * these in two sections and so does this page: what was deliberately
  * built on the ratio, then what has only been claimed about it. The grid
  * ranks the documented uses by how much the article has to say; the
@@ -47,8 +46,8 @@ function Applications() {
               ),
               source: "Adapted from the section Architecture.",
               related: [
-                { href: "./history.html#chronology", label: "Pacioli, whom Le Corbusier continued" },
-                { href: "./geometry.html#rectangle", label: "The golden rectangle" },
+                { href: "#chronology", label: "Pacioli, whom Le Corbusier continued" },
+                { href: "#rectangle", label: "The golden rectangle" },
               ],
             }}
           >
@@ -66,7 +65,7 @@ function Applications() {
                 </>
               ),
               source: "Adapted from the section Art.",
-              related: [{ href: "./world.html#disputed", label: "The claims that did not hold" }],
+              related: [{ href: "#disputed", label: "The claims that did not hold" }],
             }}
           >A golden canvas</Fact>
         </GoldenBox>
@@ -80,7 +79,7 @@ function Applications() {
           <Fact label="Music · 833 cents" tone="deep" fitClass="fit--num">833.09</Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Optimisation" fitClass="fit--num" link={{ href: "./geometry.html#angle", label: "§ IV" }}>137.5°</Fact>
+          <Fact label="Optimisation" fitClass="fit--num" link={{ href: "#angle", label: "§ IV" }}>137.5°</Fact>
         </GoldenBox>
       </GoldenGrid>
     </Band>
@@ -119,14 +118,14 @@ function Disputed() {
                 </>
               ),
               source: "Adapted from the section The Parthenon.",
-              related: [{ href: "./history.html#chronology", label: "What the Greeks did study" }],
+              related: [{ href: "#chronology", label: "What the Greeks did study" }],
             }}
           >
             {"Absent from the Greek architecture of the fifth century BC."}
           </Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Claim · the Great Pyramid is two Kepler triangles" tone="deep" body={<p>Modern scholars' consensus: not based on the golden ratio; inconsistent with Egyptian mathematics of the period.</p>} link={{ href: "./geometry.html#kepler", label: "§ IV" }}>Not φ</Fact>
+          <Fact label="Claim · the Great Pyramid is two Kepler triangles" tone="deep" body={<p>Modern scholars' consensus: not based on the golden ratio; inconsistent with Egyptian mathematics of the period.</p>} link={{ href: "#kepler", label: "§ IV" }}>Not φ</Fact>
         </GoldenBox>
         <GoldenBox {...x.boxProps("naut")}>
           <Fact label="Claim · the nautilus shell" tone="red" body={<p>A logarithmic spiral, but measurements do not support the golden ratio.</p>}
@@ -139,7 +138,7 @@ function Disputed() {
                 </>
               ),
               source: "Adapted from the section Disputed observations.",
-              related: [{ href: "./geometry.html#rectangle", label: "What the golden spiral actually is" }],
+              related: [{ href: "#rectangle", label: "What the golden spiral actually is" }],
             }}
           >Logarithmic, not golden</Fact>
         </GoldenBox>
@@ -154,14 +153,16 @@ function Disputed() {
   );
 }
 
-mount(
-  <Page
-    current="world.html"
-    kicker="Wikipedia · Golden ratio · § Applications and observations · § Disputed observations"
-    title="In the world"
-    standfirst="Some twentieth-century artists and architects, including Le Corbusier and Salvador Dalí, proportioned their works to approximate the golden ratio, believing it aesthetically pleasing. The ratio has also been used to analyse the proportions of buildings, shells, bodies and paintings, in many cases on dubious fits to data; the measurements, where they have been made, mostly do not support the claims."
-  >
-    <Applications />
-    <Disputed />
-  </Page>
-);
+export function InTheWorld() {
+  return (
+    <Part
+      id="world"
+      kicker="§ Applications and observations · § Disputed observations"
+      title="In the world"
+      standfirst="Some twentieth-century artists and architects, including Le Corbusier and Salvador Dalí, proportioned their works to approximate the golden ratio, believing it aesthetically pleasing. The ratio has also been used to analyse the proportions of buildings, shells, bodies and paintings, in many cases on dubious fits to data; the measurements, where they have been made, mostly do not support the claims."
+    >
+      <Applications />
+      <Disputed />
+    </Part>
+  );
+}

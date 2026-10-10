@@ -13,8 +13,8 @@ Capture all three, every time, in the same content state:
 | `reference-1440.png`  | 1440px | The width the grid was designed for.                                     |
 
 Full-page captures, not viewport crops. After the study is built, capture the
-rebuild at the same three widths as `study-390.png`, `study-820.png`, and
-`study-1440.png`.
+rebuild at the same three widths as `study-390.jpg`, `study-820.jpg`, and
+`study-1440.jpg`.
 
 These files are commentary on a named site. They are not redistributed as
 assets of the study and nothing from them is copied into the build.

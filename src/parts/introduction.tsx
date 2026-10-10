@@ -1,18 +1,18 @@
 import { GoldenGrid, GoldenBox } from "@gifcommit/golden-grids";
 import type { PlacementValue } from "@gifcommit/golden-grids";
-import { mount } from "../main";
-import { Page } from "../lib/Page";
+import { Part } from "../lib/Page";
 import { Band } from "../bands/Band";
 import { Fact, Figure, LinkBox } from "../lib/boxes";
 import { useViewport, pick } from "../lib/viewport";
 import { useExpandGroup } from "../lib/expand";
-import { Segment, GoldenRectangle } from "../diagrams";
+import { Segment } from "../diagrams";
 
 /**
- * Page I — the lead. The reference's lead is five paragraphs beside an
+ * Part I — the lead. The reference's lead is five paragraphs beside an
  * infobox. Here the same facts are one hero box and a descent of supporting
  * boxes, then the article's contents as a grid whose squares follow the
- * Fibonacci sequence.
+ * Fibonacci sequence. The golden rectangle that closed this part when it was
+ * a page of its own is in Geometry, where it belongs on one page.
  */
 function Lead() {
   const viewport = useViewport();
@@ -48,8 +48,8 @@ function Lead() {
               ),
               source: "Adapted from the article's lead.",
               related: [
-                { href: "./calculation.html#derivation", label: "How the number is derived" },
-                { href: "./geometry.html#rectangle", label: "The golden rectangle" },
+                { href: "#derivation", label: "How the number is derived" },
+                { href: "#rectangle", label: "The golden rectangle" },
               ],
             }}
           >
@@ -72,14 +72,14 @@ function Lead() {
                 </>
               ),
               source: "Adapted from the lead and the section History.",
-              related: [{ href: "./history.html#chronology", label: "Who studied it, and when" }],
+              related: [{ href: "#chronology", label: "Who studied it, and when" }],
             }}
           >
             {"Extreme and\nmean ratio;\ndivine proportion"}
           </Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Satisfies" fitClass="fit--num" link={{ href: "./calculation.html#derivation", label: "§ II" }} spoken="phi squared equals phi plus one">{"φ² =\nφ + 1"}</Fact>
+          <Fact label="Satisfies" fitClass="fit--num" link={{ href: "#derivation", label: "§ II" }} spoken="phi squared equals phi plus one">{"φ² =\nφ + 1"}</Fact>
         </GoldenBox>
       </GoldenGrid>
     </Band>
@@ -105,10 +105,10 @@ function Infobox() {
           </Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Algebraic form" tone="deep" fitClass="fit--num" link={{ href: "./calculation.html#roots", label: "§ II" }} spoken="one plus the square root of five, over two">{"(1 + √5)\n/ 2"}</Fact>
+          <Fact label="Algebraic form" tone="deep" fitClass="fit--num" link={{ href: "#roots", label: "§ II" }} spoken="one plus the square root of five, over two">{"(1 + √5)\n/ 2"}</Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Continued fraction" tone="deep" fitClass="fit--num" link={{ href: "./fibonacci.html#fraction", label: "§ V" }} spoken="one; one, one, one, and so on">{"[1; 1,\n1, 1, …]"}</Fact>
+          <Fact label="Continued fraction" tone="deep" fitClass="fit--num" link={{ href: "#fraction", label: "§ V" }} spoken="one; one, one, one, and so on">{"[1; 1,\n1, 1, …]"}</Fact>
         </GoldenBox>
       </GoldenGrid>
     </Band>
@@ -133,47 +133,24 @@ function Contents() {
       kind="rule"
     >
       <GoldenGrid from={2} to={to} placement={placement} clockwise={false} outline="1px solid var(--rule)">
-        <GoldenBox><LinkBox label="II · Calculation" href="./calculation.html">Deriving φ from its definition</LinkBox></GoldenBox>
-        <GoldenBox><LinkBox label="IV · Geometry" href="./geometry.html" tone="deep">Rectangle, pentagon, triangle, angle</LinkBox></GoldenBox>
-        <GoldenBox><LinkBox label="III · History" href="./history.html">From Euclid to Penrose</LinkBox></GoldenBox>
-        <GoldenBox><LinkBox label="V · Fibonacci" href="./fibonacci.html" tone="deep">Successive ratios converge on φ</LinkBox></GoldenBox>
-        <GoldenBox><LinkBox label="VI · In the world" href="./world.html">Uses and claims</LinkBox></GoldenBox>
+        <GoldenBox><LinkBox label="II · Calculation" href="#calculation">Deriving φ from its definition</LinkBox></GoldenBox>
+        <GoldenBox><LinkBox label="IV · Geometry" href="#geometry" tone="deep">Rectangle, pentagon, triangle, angle</LinkBox></GoldenBox>
+        <GoldenBox><LinkBox label="III · History" href="#history">From Euclid to Penrose</LinkBox></GoldenBox>
+        <GoldenBox><LinkBox label="V · Fibonacci" href="#fibonacci" tone="deep">Successive ratios converge on φ</LinkBox></GoldenBox>
+        <GoldenBox><LinkBox label="VI · In the world" href="#world">Uses and claims</LinkBox></GoldenBox>
         <GoldenBox><Fact label="Phi" tone="red" fitClass="fit--num">φ</Fact></GoldenBox>
       </GoldenGrid>
     </Band>
   );
 }
 
-function Rectangle() {
+/** Part I. Its heading and standfirst are the page's masthead. */
+export function Introduction() {
   return (
-    <Band
-      id="rectangle"
-      title="The golden rectangle"
-      lesson="A golden rectangle, a rectangle with an aspect ratio of φ, may be cut into a square and a smaller rectangle with the same aspect ratio, and that one cut again without end. Quarter circles drawn through the squares approximate the golden spiral, a logarithmic spiral whose radius grows by φ every quarter-turn."
-      note='from=1 to=1 · single'
-      cap="48rem"
-    >
-      <GoldenGrid from={1} to={1}>
-        <GoldenBox>
-          <Figure caption="Removing a square from a golden rectangle leaves a golden rectangle. The quarter circles approximate the golden spiral; the exact spiral is r = φ^(2θ/π) in polar coordinates. Continued in § IV, Geometry.">
-            <GoldenRectangle />
-          </Figure>
-        </GoldenBox>
-      </GoldenGrid>
-    </Band>
+    <Part id="introduction" title="Introduction" lead>
+      <Lead />
+      <Infobox />
+      <Contents />
+    </Part>
   );
 }
-
-mount(
-  <Page
-    current="index.html"
-    kicker="Wikipedia · Golden ratio"
-    title="Golden ratio"
-    standfirst="In mathematics, two quantities are in the golden ratio if their ratio is the same as the ratio of their sum to the larger of the two quantities. The Greek letter φ denotes it. It has been studied since Euclid, named divine by Pacioli, found in the pentagon, the Fibonacci numbers and the arrangement of leaves, and claimed, often wrongly, in art, architecture and nature."
-  >
-    <Lead />
-    <Infobox />
-    <Contents />
-    <Rectangle />
-  </Page>
-);

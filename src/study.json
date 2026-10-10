@@ -1,16 +1,11 @@
 {
   "number": "04",
   "name": "Wikipedia: Golden ratio",
-  "notice": "A layout study, not Wikipedia: its Golden ratio article reset as six pages of Golden Grids under the parody name GIFipedia. Text adapted under CC BY-SA 4.0; not affiliated with Wikipedia or the Wikimedia Foundation.",
+  "notice": "A layout study, not Wikipedia: its Golden ratio article reset as one page of Golden Grids in six parts under the parody name GIFipedia. Text adapted under CC BY-SA 4.0; not affiliated with Wikipedia or the Wikimedia Foundation.",
   "pages": {
-    "calculation": "Calculation",
-    "fibonacci": "Fibonacci",
-    "geometry": "Geometry",
-    "history": "History",
-    "index": "Introduction",
-    "world": "In the world"
+    "index": "The article"
   },
-  "summary": "One long Wikipedia article, on the golden ratio, divided into six pages and set in golden grids with type fitted to each square.",
+  "summary": "One long Wikipedia article, on the golden ratio, set as one page in six parts of golden grids, with type fitted to each square.",
   "reviewed": {
     "date": "October 5, 2026",
     "method": "Captured signed out at 390, 820 and 1440 pixels, with the article's wikitext saved at the revision named below.",
@@ -30,7 +25,7 @@
     "The mathematics, dates and names, as the article gives them."
   ],
   "invented": [
-    "The division into six pages, the headings' order and every figure. The diagrams and charts were drawn for this study.",
+    "The division into six parts, the headings' order and every figure. The diagrams and charts were drawn for this study.",
     "The publisher's name. GIFipedia is a parody name made for this study; nothing of Wikipedia's design or marks is used.",
     "Any error introduced by shortening is this study's, not Wikipedia's."
   ],
