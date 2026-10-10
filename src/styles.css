@@ -115,7 +115,8 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--red
 .contents a:hover { text-decoration: underline; }
 @media (max-width: 639px) { .contents ol { flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; scrollbar-width: none; } .contents ol::-webkit-scrollbar { display: none; } }
 .contents [aria-current] { border-bottom-color: var(--red); font-weight: 700; }
-html { scroll-padding-top: calc(var(--study-banner-h, 0px) + var(--contents-h, 0px) + 12px); }
+/* `html:root` so this outranks the notice's own `:root` rule in study.css. */
+html:root { scroll-padding-top: calc(var(--study-banner-h, 0px) + var(--contents-h, 0px) + 12px); }
 /* An opened square's head stays under the strip, not behind it. */
 .cell .cell__head { top: calc(var(--study-banner-h, 0px) + var(--contents-h, 0px)); }
 
