@@ -9,7 +9,9 @@ import "../styles.css";
  * and View history), the line saying where the text is from, a table of
  * contents that follows the reader down the page, the six parts, and the
  * disclosure. It does not say "layout study" or name the study here: the
- * notice above it and the disclosure below it do that on every page.
+ * notice above it and the disclosure below it do that on every page. The
+ * tabs and the links at the right are the reference's, for show: nothing in
+ * the header leaves for Wikipedia. Only the notice and the disclosure do.
  */
 export const PARTS = [
   { id: "introduction", short: "Introduction", bands: ["lead", "representations", "contents"] },
@@ -20,8 +22,6 @@ export const PARTS = [
   { id: "world", short: "In the world", bands: ["applications", "disputed"] },
 ] as const;
 
-export const ARTICLE = "https://en.wikipedia.org/wiki/Golden_ratio";
-export const REVISION = "https://en.wikipedia.org/w/index.php?title=Golden_ratio&oldid=1378520549";
 
 /** A band's heading sits one level under its part's. */
 const Level = createContext<2 | 3>(2);
@@ -150,8 +150,9 @@ export function Page({ title, standfirst, children }: { title: string; standfirs
           </a>
           <Search />
           <ul className="site__links">
-            <li><a href={ARTICLE}>Read on Wikipedia</a></li>
-            <li><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+            <li><span>Donate</span></li>
+            <li><span>Create account</span></li>
+            <li><span>Log in</span></li>
           </ul>
         </div>
       </header>
@@ -160,13 +161,13 @@ export function Page({ title, standfirst, children }: { title: string; standfirs
         <h1 className="article__title">{title}</h1>
         <div className="tabs">
           <ul className="tabs__left" aria-label="Views of this subject">
-            <li><a href="#top" aria-current="page">Article</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Talk:Golden_ratio">Talk</a></li>
+            <li><span aria-current="page">Article</span></li>
+            <li><span>Talk</span></li>
           </ul>
           <ul className="tabs__right" aria-label="Views of this article">
-            <li><a href="#top" aria-current="page">Read</a></li>
-            <li><a href={REVISION}>View source</a></li>
-            <li><a href="https://en.wikipedia.org/w/index.php?title=Golden_ratio&action=history">View history</a></li>
+            <li><span aria-current="page">Read</span></li>
+            <li><span>View source</span></li>
+            <li><span>View history</span></li>
           </ul>
         </div>
         <p className="article__from">Adapted from Wikipedia, the free encyclopedia</p>
