@@ -5,7 +5,7 @@
 An unaffiliated layout study of the Wikipedia article
 [Golden ratio](https://en.wikipedia.org/wiki/Golden_ratio): one long article
 taken apart into six pages of golden grids, one fact per square, with type
-set to the square, published under the author's own brand, GIFcommit. Built with
+set to the square, published under a parody name, GIFipedia. Built with
 [Golden Grids](https://github.com/gregoryedgerton/golden-grids) from the
 [study template](https://github.com/gregoryedgerton/golden-grids-study-template).
 

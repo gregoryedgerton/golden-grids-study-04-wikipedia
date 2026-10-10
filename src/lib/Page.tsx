@@ -55,7 +55,7 @@ export function Page({ current, kicker, title, standfirst, children }: {
       <Tools />
       <header className="masthead">
         <p className="masthead__kicker">
-          <span><strong className="brand">GIFcommit</strong> · Layout study 04</span>
+          <span><strong className="brand">GIFipedia</strong> · Layout study 04</span>
           <span>{kicker}</span>
           <span>No. {index + 1} of {PAGES.length}</span>
         </p>
